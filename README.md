@@ -26,10 +26,14 @@
    	- Time durations of wash machine and dishwasher cycles were measured to determine timer cutoffs.
 
 ## Flow Duration Study
-- Overnight activity followed by toilet flush at 5am.
+- Overnight activity followed by shower at 5am.
 	- Note visual sign of failing toilet seal, which was seen before heard, enabling repair before failure!
    
 ![Toilet Flush](media/ToiLeak.jpg)
+
+- Overnight activity followed by 2 toilet flushes, shower
+
+![Shower](media/ToiLeak2.jpg)
 
 - Wash Machine flow signature
 
