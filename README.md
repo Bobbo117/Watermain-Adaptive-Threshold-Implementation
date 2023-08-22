@@ -25,3 +25,4 @@
    	- Motion in the kitchen or bathroom overrides the operation by restting the timer.
    	- Time durations of wash machine and dishwasher cycles were measured to determine timer cutoffs.
    	  
+media/ToiLeak.jpg
