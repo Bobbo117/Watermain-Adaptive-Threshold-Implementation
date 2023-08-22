@@ -24,5 +24,12 @@
    	- If the timer runs out, the main valve is shut off.
    	- Motion in the kitchen or bathroom overrides the operation by restting the timer.
    	- Time durations of wash machine and dishwasher cycles were measured to determine timer cutoffs.
-   	  
-media/ToiLeak.jpg
+
+## Flow Duration Study
+- Overnight activity followed by toilet flush at 5am.
+	- Note visual sign of failing toilet seal, which we saw here before hearing it, enabling repair before failure!
+   
+![Toilet Flush](media/ToiLeak.jpg)
+
+- Wash Machine flow signature
+
