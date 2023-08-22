@@ -7,7 +7,7 @@
 
 -  Hardware Alterations (optional)
 	- Buck converter is eliminated -
- 	- Dedicated 5v supply is provided for ESP8266
+ 	- Dedicated 5v supply wall wart is provided for ESP8266
   	- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure
 
  - Software Alterations
@@ -23,3 +23,5 @@
   	- A faster then normal drop in psi below the threshold initiates a timer and also sets second thresshold above the floor to determine when to stop the timer.
    	- If the timer runs out, the main valve is shut off.
    	- Motion in the kitchen or bathroom overrides the operation by restting the timer.
+   	- Time durations of wash machine and dishwasher cycles were measured to determine timer cutoffs.
+   	  
