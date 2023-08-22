@@ -39,5 +39,9 @@
 
 ![LaundrySignature](media/LaundrySignature.jpg)
 
+- Addaptive Threshhold tracking slow leak
+  
+![Adaptive](media/AdaptiveThreshhold2.jpg)
+
 
 
