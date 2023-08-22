@@ -27,9 +27,13 @@
 
 ## Flow Duration Study
 - Overnight activity followed by toilet flush at 5am.
-	- Note visual sign of failing toilet seal, which we saw here before hearing it, enabling repair before failure!
+	- Note visual sign of failing toilet seal, which was seen before heard, enabling repair before failure!
    
 ![Toilet Flush](media/ToiLeak.jpg)
 
 - Wash Machine flow signature
+
+![LaundrySignature](media/LaundrySignature.jpg)
+
+
 
