@@ -18,8 +18,8 @@
 
 ## Adaptive Threshhold Theory of Operation
 - Incoming water pressure varies by 20 psi during the course of a day, usually building up during the night and dropping as people rise in the morning.
-- The adaptive threshhold is a "leaky peak detector".
- 	- It rides 3psi below the incoming psi as the incoming psi slowly ebbs and flows.
+- The adaptive threshhold is based on a "leaky peak detector".
+ 	- It rides 1 psi below the incoming psi as the incoming psi slowly ebbs and flows.
   	- A faster then normal drop in psi below the threshold initiates a timer and also sets second thresshold above the floor to determine when to stop the timer.
    	- If the timer runs out, the main valve is shut off.
    	- Motion in the kitchen or bathroom overrides the operation by restting the timer.
@@ -39,7 +39,7 @@
 
 ![LaundrySignature](media/LaundrySignature.jpg)
 
-- Addaptive Threshhold tracking slow leak
+- Adaptive Threshhold tracking slow leak
   
 ![Adaptive](media/AdaptiveThreshhold2.jpg)
 
