@@ -52,5 +52,7 @@
   
 ![Adaptive](media/AdaptiveThreshhold2.jpg)
 
+![Adaptive](media/AdaptiveThreshhold.jpg)
+
 
 
