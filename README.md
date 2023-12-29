@@ -16,14 +16,20 @@
    	- Standby mode disables shutoff to allow for anticipated excess water flow such as long showers by your teenager, etc.
 	- Apply adaptive threshhold to detect smaller leaks than fixed threshhold detects while preventing premature watermain cutoff
 
+## System Operation
+- Based on appliance signatures, a 10 minute flow causes the valve to shut down unless the following conditions exist:
+	- Motion is detected in the bathroom or kitchens, causing a 20 minute standby period.
+	- The manual override switch has been actuated.
+
 ## Adaptive Threshhold Theory of Operation
-- Incoming water pressure varies by 20 psi during the course of a day, usually building up during the night and dropping as people rise in the morning.
-- The adaptive threshhold is a "leaky peak detector".
- 	- It rides 3psi below the incoming psi as the incoming psi slowly ebbs and flows.
-  	- A faster then normal drop in psi below the threshold initiates a timer and also sets second thresshold above the floor to determine when to stop the timer.
-   	- If the timer runs out, the main valve is shut off.
-   	- Motion in the kitchen or bathroom overrides the operation by restting the timer.
+- Incoming water pressure varies by several psi during the course of a day, usually building up during the night and dropping as people rise in the morning.
+- The adaptive threshhold is based on a "leaky peak detector".
+ 	- It rides 1 psi below the incoming psi as the incoming psi slowly ebbs and flows.
+  	- A faster then normal drop in psi below the threshold initiates the 10 minute flow timer and also sets second thresshold to determine when the flow has stopped.
+   	- If the flow timer reached 10 minutes and the standby timer is not active, the main valve is shut off.
+   	- Motion in the kitchen or bathroom overrides the operation by restting the standby timer.
    	- Time durations of wash machine and dishwasher cycles were measured to determine timer cutoffs.
+- Detection of moisture by external sensors caouse immediate valve closure. 
 
 ## Flow Duration Study
 - Overnight activity followed by shower at 5am.
