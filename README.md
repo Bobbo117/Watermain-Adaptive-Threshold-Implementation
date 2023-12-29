@@ -41,11 +41,14 @@
 
 ![Shower](media/ToiLeak2.jpg)
 
-- Wash Machine flow signature
+- Wash Machine flow signature indicates max flow duration is less than 5 minutes:
 
 ![LaundrySignature](media/LaundrySignature.jpg)
 
-- Addaptive Threshhold tracking slow leak
+- Dish Washer flow signature indicates max flow duration is less than 3 minutes.
+
+  
+- Adaptive Threshhold tracking slow leak
   
 ![Adaptive](media/AdaptiveThreshhold2.jpg)
 
