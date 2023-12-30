@@ -15,7 +15,7 @@
 	- No impeller is used.
 
 - Software Enhancements
-	- Detects water leaks as small as 1 cup per 6 minutes (42 ml/sec) using adaptive threshhld and shuts off the main water line automatically within 10 minutes to limit water damage.
+	- Detects water leaks as small as 1 cup per 6 minutes (42 ml/min) using adaptive threshhld and shuts off the main water line automatically within 10 minutes to limit water damage.
  	- Cellular ioT control and monitoring is accomplished via ESPNOW in parallel with HA communication via MQTT.
 	- Pressure monitoring detects water leak based on duration of reduced pressure over adjustable defined time limit. 
    	- Standby mode disables shutoff to allow for anticipated excess water flow such as long showers, powerwashing by contractors, etc.
@@ -27,7 +27,7 @@
 	- The manual override switch has been actuated.
 
 ## Adaptive Threshhold Theory of Operation
-- Incoming water pressure varies by several psi during the course of a day, usually building up during the night and dropping as people rise in the morning.
+- Incoming water pressure varies by several psi during the course of a day, usually building up during the night and dropping as people arise in the morning.
 - The adaptive threshhold is based on a "leaky peak detector".
  	- It rides 1 psi below the incoming MAX psi as the incoming psi slowly ebbs and flows.
   	- A faster then normal drop in psi below the threshold initiates the 10 minute flow timer and also sets second thresshold to determine when the flow has stopped.
