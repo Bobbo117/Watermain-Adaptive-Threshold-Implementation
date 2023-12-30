@@ -1,19 +1,22 @@
 # Smart-Home-Water-Leak-Detector
 
+
+- Water damage occurs frequently. It can be expensive and inconvenient.
+	- Insurance claims frequently result in insurance cancellation or premium increase.
+	- A leak can cause undetected damage while you are away or even when you are home watching TV, napping, or sleeping overnight.
+
 - This project is an adaptation of the project at https://github.com/heyitsyang/Whole-House-Water-Leak-Controller .
-
-- Detects water leaks and shuts off the main water line to limit water damage.
-	- Water damage insurance claims are frequent, expensive, inconvenient, and can result in insurance cancellation.
-
+  
 -  Hardware Alterations (optional)
-	- Buck converter is eliminated -
- 	- Dedicated 5v supply wall wart is provided for ESP8266
+	- Buck converter is eliminated 
+ 	- Dedicated 5v usb supply wall wart is provided for ESP8266
   	- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure
 
-- Software Alterations
- 	- Dependency on Home Assistant is secondary; Cellular iOT is primary control 
+- Software Enhancements
+	- Detects water leaks as small as 1 cup per 6 minutes (42 ml/sec) using adaptive threshhld and shuts off the main water line automatically within 10 minutes to limit water damage.
+ 	- Cellular iOT control and monitoring is added  
 	- Pressure monitoring detects water leak based on duration of reduced pressure over adjustable defined time limit. 
-   	- Standby mode disables shutoff to allow for anticipated excess water flow such as long showers by your teenager, etc.
+   	- Standby mode disables shutoff to allow for anticipated excess water flow such as long showers, powerwashing by contractors, etc.
 	- Apply adaptive threshhold to detect smaller leaks than fixed threshhold detects while preventing premature watermain cutoff
 
 ## System Operation
