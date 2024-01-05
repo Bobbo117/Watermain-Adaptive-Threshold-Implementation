@@ -1,21 +1,33 @@
 # Smart-Home-Water-Leak-Detector
 
-
 - Water damage occurs frequently. It can be expensive and inconvenient.
 	- Insurance claims frequently result in insurance cancellation or premium increase.
 	- A silent leak can cause damage while you are away or even when you are home watching TV, napping, or sleeping overnight.
 
-- This project is an adaptation of the project at https://github.com/heyitsyang/Whole-House-Water-Leak-Controller .
-  	- It answers the question, "How small a leak can we detect without using an impeller, i.e., no moving parts?"
-  	  
--  Hardware Alterations (optional)
-	- Buck converter is eliminated 
- 	- Dedicated 5v usb supply wall wart is provided for ESP8266
-  	- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure
-	- No impeller is used.
+- This project starts with Yang's project at https://github.com/heyitsyang/Whole-House-Water-Leak-Controller .  Optional adaptations:
+	- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
+  	- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure.
 
+- Observations
+  	- Incoming water pressure varies by several psi during the course of a day, usually building up during the night and dropping as people rise in the morning.
+  	- Water pressure increasses when water heater is active.
+  	- water flow may not be detected by fixed threshhold for slower flow rates or for periods of higher pressure.
+  	  
+- It begs the question, "How small a leak can we detect without using an impeller, i.e., no moving parts that are subject to corrosion over time?"
+	- Pressure measurements were taken under various conditions (flush, shower, laundry, dishes, etc.)
+	- An adaptive threshhold mechanism based on a "leaky peak detector" was implemented in software as an adjunct to Yang's software.
+	- Detects water leaks as small as 1 cup per 6 minutes (42 ml/min) and shuts off the main water line automatically in 10 minutes to limit water damage.
+   	- Motion detected in the bathrooms or kitchen cause a 20 minute grace period.
+
+- Adaptive threshhold theory of operation
+  	- Leaky peak - As water pressure rises, calculated leaky peak pressure = pressure.  As pressure falls, the calculated leaky peak pressure falls at a slower rate.
+  	- Threshhold - The threshhold that defines flow is set at 1 psi below the most recent calculated leaky peak pressure.
+  	- Pressure - When pressure goes below the threshhold, water is flowing and the flow timer begins.
+  	- Motion Sensors - reset the flow timer when motion is detected.
+  	- There is a similar mechanism to calculate the threshhold when the flow stops and the pressure rises again.
+ 
 - Software Enhancements
-	- Detects water leaks as small as 1 cup per 6 minutes (42 ml/min) using adaptive threshhld and shuts off the main water line automatically within 10 minutes to limit water damage.
+	
  	- Cellular ioT control and monitoring is accomplished via ESPNOW in parallel with HA communication via MQTT.
 	- Pressure monitoring detects water leak based on duration of reduced pressure over adjustable defined time limit. 
    	- Standby mode disables shutoff to allow for anticipated excess water flow such as long showers, powerwashing by contractors, etc.
@@ -27,7 +39,6 @@
 	- The manual override switch has been actuated.
 
 ## Adaptive Threshhold Theory of Operation
-- Incoming water pressure varies by several psi during the course of a day, usually building up during the night and dropping as people arise in the morning.
 - The adaptive threshhold is based on a "leaky peak detector".
  	- It rides 1 psi below the incoming MAX psi as the incoming psi slowly ebbs and flows.
   	- A faster then normal drop in psi below the threshold initiates the 10 minute flow timer and also sets second thresshold to determine when the flow has stopped.
