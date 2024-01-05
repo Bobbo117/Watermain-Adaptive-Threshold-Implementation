@@ -11,7 +11,7 @@
 - Observations
   	- Incoming water pressure varies by several psi during the course of a day, usually building up during the night and dropping as people rise in the morning.
   	- Water pressure increasses when water heater is active.
-  	- water flow may not be detected by fixed threshhold for slower flow rates or for periods of higher pressure.
+  	- Water flow may not be detected by fixed threshhold for slower flow rates or for periods of higher pressure.
   	  
 - It begs the question, "How small a leak can we detect without using an impeller, i.e., no moving parts that are subject to corrosion over time?"
 	- Pressure measurements were taken under various conditions (flush, shower, laundry, dishes, etc.)
@@ -26,13 +26,6 @@
   	- Motion Sensors - reset the flow timer when motion is detected.
   	- There is a similar mechanism to calculate the threshhold when the flow stops and the pressure rises again.
  
-- Software Enhancements
-	
- 	- Cellular ioT control and monitoring is accomplished via ESPNOW in parallel with HA communication via MQTT.
-	- Pressure monitoring detects water leak based on duration of reduced pressure over adjustable defined time limit. 
-   	- Standby mode disables shutoff to allow for anticipated excess water flow such as long showers, powerwashing by contractors, etc.
-	- Apply adaptive threshhold to detect smaller leaks than fixed threshhold detects while preventing premature watermain cutoff
-
 ## System Operation
 - Based on appliance signatures, a 10 minute flow causes the valve to shut down unless the following conditions exist:
 	- Motion is detected in the bathroom or kitchens, causing a 20 minute standby period.
