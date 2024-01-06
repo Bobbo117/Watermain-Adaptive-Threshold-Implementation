@@ -68,7 +68,7 @@
 
 Decrease:
 
-![Decrease](media/20240104_174717 G p decr.jpg)
+![Decrease](media/20240104_174717%20G%20p%20decr.jpg)
 
 
 
