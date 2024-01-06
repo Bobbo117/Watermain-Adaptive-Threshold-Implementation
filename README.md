@@ -1,9 +1,5 @@
 # Smart-Home-Water-Leak-Detector
 
-- Water damage occurs frequently. It can be expensive and inconvenient.
-	- Insurance claims frequently result in insurance cancellation or premium increase.
-	- A silent leak can cause damage while you are away or even when you are home watching TV, napping, or sleeping overnight.
-
 - This project starts with Yang's project at https://github.com/heyitsyang/Whole-House-Water-Leak-Controller .  Optional adaptations:
 	- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
   	- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure.
@@ -25,6 +21,14 @@
   	- Pressure - When pressure goes below the threshhold, water is flowing and the flow timer begins.
   	- Motion Sensors - reset the flow timer when motion is detected.
   	- There is a similar mechanism to calculate the threshhold when the flow stops and the pressure rises again.
+  	- Examples:
+  	- 3am increase:
+
+	- ![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
+
+	- Decrease:
+
+	- ![Decrease](media/20240104_174717%20G%20p%20decr.jpg)
  
 ## System Operation
 - Based on appliance signatures, a 10 minute flow causes the valve to shut down unless the following conditions exist:
@@ -62,13 +66,7 @@
 
 ![Adaptive](media/AdaptiveThreshhold.jpg)
 
-3am increase:
 
-![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
-
-Decrease:
-
-![Decrease](media/20240104_174717%20G%20p%20decr.jpg)
 
 
 
