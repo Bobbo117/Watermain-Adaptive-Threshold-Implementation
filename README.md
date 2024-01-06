@@ -63,7 +63,12 @@
 ![Adaptive](media/AdaptiveThreshhold.jpg)
 
 3am increase:
+
 ![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
+
+Decrease:
+
+![Decrease](media/20240104_174717 G p decr.jpg)
 
 
 
