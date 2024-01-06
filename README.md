@@ -40,6 +40,8 @@
    	- Time durations of wash machine and dishwasher cycles were measured to determine timer cutoffs.
 - Detection of moisture by external sensors caouse immediate valve closure. 
 
+![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
+
 ## Flow Duration Study
 - Overnight activity followed by shower at 5am.
 	- Note visual sign of failing toilet seal, which was seen before heard, enabling repair before failure!
