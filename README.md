@@ -40,7 +40,7 @@
    	- Time durations of wash machine and dishwasher cycles were measured to determine timer cutoffs.
 - Detection of moisture by external sensors caouse immediate valve closure. 
 
-![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
+
 
 ## Flow Duration Study
 - Overnight activity followed by shower at 5am.
@@ -52,7 +52,7 @@
 
 ![Shower](media/ToiLeak2.jpg)
 
-- Wash Machine flow signature indicates max flow duration is less than 5 minutes:
+- Wash Machine and dishwasher flow signatures indicate max flow duration is less than 5 minutes:
 
 ![LaundrySignature](media/LaundrySignature.jpg)
 
@@ -61,6 +61,9 @@
 ![Adaptive](media/AdaptiveThreshhold2.jpg)
 
 ![Adaptive](media/AdaptiveThreshhold.jpg)
+
+3am increase:
+![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
 
 
 
