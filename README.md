@@ -5,12 +5,13 @@
   	- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure.
 
 - Observations
-  	- Incoming water pressure varies by several psi during the course of a day, usually building up during the night and dropping as people rise in the morning.
+  	- Water pressure varies during the course of a day, increasing during the night and decreasing in the morning.
   	- Water pressure increasses when water heater is active.
+  	- Water pressure recovers slowly after demand if there is a pressure regulator.
   	- Water flow may not be detected by fixed threshhold for slower flow rates or for periods of higher pressure.
   	  
-- It begs the question, "How small a leak can we detect without using an impeller, i.e., no moving parts that are subject to corrosion over time?"
-	- Pressure measurements were taken under various conditions (flush, shower, laundry, dishes, etc.)
+- How small a leak can we detect without using an impeller, i.e., no moving parts that are subject to corrosion over time?"
+	- Pressure measurements were plotted under various conditions (flush, shower, laundry, dishes, etc.)
 	- An adaptive threshhold mechanism based on a "leaky peak detector" was implemented in software as an adjunct to Yang's software.
 	- Detects water leaks as small as 1 cup per 6 minutes (42 ml/min) and shuts off the main water line automatically in 10 minutes to limit water damage.
    	- Motion detected in the bathrooms or kitchen cause a 20 minute grace period.
