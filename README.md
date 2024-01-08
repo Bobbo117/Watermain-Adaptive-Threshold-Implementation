@@ -80,11 +80,24 @@
 
 ![LaundrySignature](media/LaundrySignature.jpg)
 
-- Adaptive Threshhold tracking slow leak
+- Adaptive Threshhold tracking intermittent slow flow
   
 ![Adaptive2](media/AdaptiveThreshhold2.jpg)
 
+- Two Flushes and a shower.
+  
 ![Adaptive](media/AdaptiveThreshold.jpg)
+
+## Hardware
+- PIR motion sensors with tempeerature/humidity
+
+- Valve is instaled between silt filter and charcoal filter
+
+## Home Assistant Screens
+
+
+
+
 
 
 
