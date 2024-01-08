@@ -5,7 +5,10 @@
   	- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure.
 
 - Observations
-	![Day](media/20240108_DAY_Plot.jpg) 
+	- Plot of one 24 hour pressure profile:
+  
+	- ![Day](media/20240108_DAY_Plot.jpg)
+
   	- Water pressure varies during the course of a day, increasing during the night and decreasing in the morning.
   	- Water pressure increasses when water heater is active.
   	- Water pressure recovers slowly after demand if there is a pressure regulator.
