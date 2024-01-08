@@ -12,7 +12,7 @@
   	- Water pressure varies several psi during the course of a day.
   	- Water pressure spikes when water heater is active.
   	- Water pressure recovers slowly after demand if there is a pressure regulator.
-  	- Water flow may not be detected by fixed threshhold for slower flow rates or for periods of higher pressure.
+  	- Water flow may not be detected by a static threshhold for slower flow rates or during periods of higher pressure.
   	  
 - How small a leak can we detect without using an impeller?"
 	- Water flow duration was measured under various conditions (flush, shower, laundry, dishes, etc.)
@@ -26,16 +26,16 @@
 - How to interpret nightly static leakage test results
 	- Typical nightly results range betwwen -.06 and -.2 psi at my house.
  	- pressure decrease will be greater if the test is run soon after the water heater is activated. 
-    	- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static leakage test.
+    	- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static leakage test under normal conditions.
     
 - Adaptive threshhold theory of operation
   	- Leaky peak - If pressure (P) rises above the peak value, the calculated peak pressure is set equal P.
   		- The peak pressure stays constant for the next 10 minutes unless P exceeds it before then.
-  	 	- After 10 minutes, the peak is reduced .25 psi if it doesn't hit P.
-  		- As P falls, the calculated peak pressure falls at a slower rate.  Hence, the term leaky peak.
+  	 	- After 10 minutes, the peak is reduced .25 psi if it doesn't go less than P.
+  		- As P falls, the calculated peak pressure generally falls at a slower rate.  Hence, the term leaky peak.
   	- Threshhold - The threshhold that defines flow is set at 1 psi below the most recent calculated leaky peak pressure.
-  	- Flow - When P goes below the threshhold, water is flowing and the 10 minute flow timer begins.
-  	- Motion Sensors - reset the flow timer when motion is detected.
+  	- Flow - When P goes below the threshhold, the 10 minute flow timer begins.
+  	- Motion Sensors reset the flow timer when motion is detected.
   	 
   	- There is a similar mechanism to calculate the threshhold when the flow stops and the pressure rises again.
   
@@ -53,6 +53,7 @@
 - Based on appliance signatures, a 10 minute flow causes the valve to shut down unless the following conditions exist:
 	- Motion is detected in the bathroom or kitchens, causing a 20 minute standby period.
 	- The manual override switch has been actuated.
+	- Detection of moisture by external sensors caouse immediate valve closure.
 
 ## Adaptive Threshhold Theory of Operation
 - The adaptive threshhold is based on a "leaky peak detector".
@@ -61,7 +62,7 @@
    	- If the flow timer reached 10 minutes and the standby timer is not active, the main valve is shut off.
    	- Motion in the kitchen or bathroom overrides the operation by restting the standby timer.
    	- Time durations of wash machine and dishwasher cycles were measured to determine timer cutoffs.
-- Detection of moisture by external sensors caouse immediate valve closure. 
+
 
 
 
