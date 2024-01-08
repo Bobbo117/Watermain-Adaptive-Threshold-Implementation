@@ -7,10 +7,10 @@
 - Observations
 	- Plot of one 24 hour pressure profile:
   
-	- ![Day](media/20240108_DAY_Plot.jpg)
+	  ![Day](media/20240108_DAY_Plot.jpg)
 
-  	- Water pressure varies during the course of a day, increasing during the night and decreasing in the morning.
-  	- Water pressure increasses when water heater is active.
+  	- Water pressure varies several psi during the course of a day.
+  	- Water pressure spikes when water heater is active.
   	- Water pressure recovers slowly after demand if there is a pressure regulator.
   	- Water flow may not be detected by fixed threshhold for slower flow rates or for periods of higher pressure.
   	  
