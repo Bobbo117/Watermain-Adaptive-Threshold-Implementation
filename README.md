@@ -10,24 +10,38 @@
   	- Water pressure recovers slowly after demand if there is a pressure regulator.
   	- Water flow may not be detected by fixed threshhold for slower flow rates or for periods of higher pressure.
   	  
-- How small a leak can we detect without using an impeller, i.e., no moving parts that are subject to corrosion over time?"
-	- Pressure measurements were plotted under various conditions (flush, shower, laundry, dishes, etc.)
-	- An adaptive threshhold mechanism based on a "leaky peak detector" was implemented in software as an adjunct to Yang's software.
-	- Detects water leaks as small as 1 cup per 6 minutes (42 ml/min) and shuts off the main water line automatically in 10 minutes to limit water damage.
-   	- Motion detected in the bathrooms or kitchen cause a 20 minute grace period.
-
+- How small a leak can we detect without using an impeller?"
+	- Water flow duration was measured under various conditions (flush, shower, laundry, dishes, etc.)
+	- An adaptive threshhold was implemented to close the main valve 10 minutes after detecting water flow.
+ 	- Motion detected in the bathrooms or kitchen cause a 20 minute grace period (for showers, proof of consciousness, etc.).
+   
+ 		- 75 ml/min flow is detected in 80 seconds. Total leak = 75(80/60) + 10(75) = 850 ml (3+ cups).
+     		- 40 ml/min flow is detected in 6 minutes.  Total leak = 6(40) +10(40) = 640 ml (<3 cups). 
+       		- 24 ml/min flow (22 drips/10 sec) is detected in 11 minutes.  Total leak = 11(24) + 10(24) = 504 ml (2 cups).
+  
+- How to interpret nightly static leakage test results
+	- Typical nightly results range betwwen -.06 and -.2 psi at my house.
+ 	- pressure decrease will be greater if the test is run soon after the water heater is activated. 
+    	- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static leakage test.
+    
 - Adaptive threshhold theory of operation
-  	- Leaky peak - As water pressure rises, calculated leaky peak pressure = pressure.  As pressure falls, the calculated leaky peak pressure falls at a slower rate.
+  	- Leaky peak - If pressure (P) rises above the peak value, the calculated peak pressure is set equal P.
+  		- The peak pressure stays constant for the next 10 minutes unless P exceeds it before then.
+  	 	- After 10 minutes, the peak is reduced .25 psi if it doesn't hit P.
+  		- As P falls, the calculated peak pressure falls at a slower rate.  Hence, the term leaky peak.
   	- Threshhold - The threshhold that defines flow is set at 1 psi below the most recent calculated leaky peak pressure.
-  	- Pressure - When pressure goes below the threshhold, water is flowing and the flow timer begins.
+  	- Flow - When P goes below the threshhold, water is flowing and the 10 minute flow timer begins.
   	- Motion Sensors - reset the flow timer when motion is detected.
+  	- 
   	- There is a similar mechanism to calculate the threshhold when the flow stops and the pressure rises again.
-  	- Examples:
-  	- 3am increase:
+  
+  - Examples:
+  	- The folllowing cellphone screenshot was taken as pressure was increasing.
+   	- The peak and threshhold are recalculated each time the pressure increases above the prior peak.
 
 	- ![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
 
-	- Decrease:
+	- The following plot shows the pressure decreasing at a rate of ,,, and the peak is reduced .25 psi / 10 min
 
 	- ![Decrease](media/20240104_174717%20G%20p%20decr.jpg)
  
