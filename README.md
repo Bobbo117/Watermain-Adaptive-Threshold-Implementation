@@ -91,6 +91,10 @@
 ## Hardware
 - PIR motion sensors with tempeerature/humidity
 
+![PIR_Disassembled](media/PIRDissassembly.jpg)
+
+![PIR_Assembled](media/PIR_Motion_Detector.jpg)
+
 - Valve is instaled between silt filter and charcoal filter
 
 ## Home Assistant Screens
