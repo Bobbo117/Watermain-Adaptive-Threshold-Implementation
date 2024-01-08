@@ -84,7 +84,7 @@
   
 ![Adaptive2](media/AdaptiveThreshhold2.jpg)
 
-![Adaptive](media/AdaptiveThreshhold.jpg)
+![Adaptive](media/AdaptiveThreshold.jpg)
 
 
 
