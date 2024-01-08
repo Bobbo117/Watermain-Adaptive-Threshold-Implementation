@@ -26,7 +26,7 @@
 - How to interpret nightly static leakage test results
 	- Typical nightly results range betwwen -.06 and -.2 psi at my house.
  	- pressure decrease will be greater if the test is run soon after the water heater is activated. 
-    	- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static leakage test under normal conditions.
+    	- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static pressure test under normal conditions.
     
 - Adaptive threshhold theory of operation
   	- Leaky peak - If pressure (P) rises above the peak value, the calculated peak pressure is set equal P.
@@ -68,8 +68,8 @@
 
 ## Flow Duration Study
 - Overnight activity followed by shower at 5am.
-	- Note visual sign of failing toilet seal, which was seen before heard, enabling repair before failure!
-   
+	- Note visual sign of failing toilet seal, which was seen before heard:
+      
 ![Toilet Flush](media/ToiLeak.jpg)
 
 - Overnight activity followed by 2 toilet flushes, shower
