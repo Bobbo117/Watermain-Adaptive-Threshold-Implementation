@@ -82,7 +82,7 @@
 
 - Adaptive Threshhold tracking slow leak
   
-![Adaptive](media/AdaptiveThreshhold2.jpg)
+![Adaptive2](media/AdaptiveThreshhold2.jpg)
 
 ![Adaptive](media/AdaptiveThreshhold.jpg)
 
