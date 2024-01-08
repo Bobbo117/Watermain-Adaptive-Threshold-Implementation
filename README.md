@@ -19,9 +19,9 @@
 	- An adaptive threshhold was implemented to close the main valve 10 minutes after detecting water flow.
  	- Motion detected in the bathrooms or kitchen cause a 20 minute grace period (for showers, proof of consciousness, etc.).
    
- 		- 75 ml/min flow is detected in 80 seconds. Total leak = 75(80/60) + 10(75) = 850 ml (3+ cups).
-     		- 40 ml/min flow is detected in 6 minutes.  Total leak = 6(40) +10(40) = 640 ml (<3 cups). 
-       		- 24 ml/min flow (22 drips/10 sec) is detected in 11 minutes.  Total leak = 11(24) + 10(24) = 504 ml (2 cups).
+ 	- 75 ml/min flow is detected in 80 seconds. Total leak = 75(80/60) + 10(75) = 850 ml (3+ cups).
+        - 40 ml/min flow is detected in 6 minutes.  Total leak = 6(40) +10(40) = 640 ml (<3 cups). 
+       	- 24 ml/min flow (22 drips/10 sec) is detected in 11 minutes.  Total leak = 11(24) + 10(24) = 504 ml (2 cups).
   
 - How to interpret nightly static leakage test results
 	- Typical nightly results range betwwen -.06 and -.2 psi at my house.
@@ -36,18 +36,18 @@
   	- Threshhold - The threshhold that defines flow is set at 1 psi below the most recent calculated leaky peak pressure.
   	- Flow - When P goes below the threshhold, water is flowing and the 10 minute flow timer begins.
   	- Motion Sensors - reset the flow timer when motion is detected.
-  	- 
+  	 
   	- There is a similar mechanism to calculate the threshhold when the flow stops and the pressure rises again.
   
   - Examples:
   	- The folllowing cellphone screenshot was taken as pressure was increasing.
    	- The peak and threshhold are recalculated each time the pressure increases above the prior peak.
 
-	- ![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
+	  ![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
 
-	- The following plot shows the pressure decreasing at a rate of ,,, and the peak is reduced .25 psi / 10 min
+	- The following plot shows the pressure decreasing at a rate of .125 psi/10 min; the peak is reduced .25 psi / 10 min until the two meet
 
-	- ![Decrease](media/20240104_174717%20G%20p%20decr.jpg)
+	  ![Decrease](media/20240104_174717%20G%20p%20decr.jpg)
  
 ## System Operation
 - Based on appliance signatures, a 10 minute flow causes the valve to shut down unless the following conditions exist:
