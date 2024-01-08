@@ -99,13 +99,13 @@
 
 ## Home Assistant Screens
 
-![1](20240108_HA_Plot_PIR.jpg)
+![1](media/20240108_HA_Plot_PIR.jpg)
 
-![2](20240108_HA_Settings.jpg)
+![2](media/20240108_HA_Settings.jpg)
 
-![3](20240108_HA_Settings2.jpg)
+![3](media/20240108_HA_Settings2.jpg)
 
-![4](20240108_HA_full.jpg)
+![4](media/20240108_HA_full.jpg)
 
 
 
