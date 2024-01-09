@@ -7,7 +7,7 @@
 - Observations
 	- Plot of one 24 hour pressure profile:
   
-	  ![Day](media/20240108_DAY_Plot.jpg)
+ ![Day](media/20240108_DAY_Plot.jpg)
 
   	- Water pressure varies several psi during the course of a day.
   	- Water pressure spikes when water heater is active.
