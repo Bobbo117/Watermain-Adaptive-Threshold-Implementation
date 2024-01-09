@@ -3,11 +3,11 @@
 - This project starts with Yang's project at https://github.com/heyitsyang/Whole-House-Water-Leak-Controller .  Optional adaptations:
 	- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
   	- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure.
-
+	
 - Observations
 	- Plot of one 24 hour pressure profile:
   
- ![Day](media/20240108_DAY_Plot.jpg)
+ 	![Day](media/20240108_DAY_Plot.jpg)
 
   	- Water pressure varies several psi during the course of a day.
   	- Water pressure spikes when water heater is active.
