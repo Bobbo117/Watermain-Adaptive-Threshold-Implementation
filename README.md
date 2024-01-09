@@ -17,14 +17,18 @@
 - How small a leak can we detect without using an impeller?"
 	- Water flow duration was measured under various conditions (flush, shower, laundry, dishes, etc.)
 	- An adaptive threshhold was implemented to close the main valve 10 minutes after detecting water flow.
+ 		- The data suggest 6 minutes would be safe; I am working slowly toward that number. 
  	- Motion detected in the bathrooms or kitchen cause a 20 minute grace period (for showers, proof of consciousness, etc.).
-   
- 	- 75 ml/min flow is detected in 80 seconds. Total leak = 75(80/60) + 10(75) = 850 ml (3+ cups).
-        - 40 ml/min flow is detected in 6 minutes.  Total leak = 6(40) +10(40) = 640 ml (<3 cups). 
-       	- 24 ml/min flow (22 drips/10 sec) is detected in 11 minutes.  Total leak = 11(24) + 10(24) = 504 ml (2 cups).
-  
-- How to interpret nightly static pressure test results
-	- Typical nightly results range betwwen -.06 and -.2 psi at my house.
+    
+  	- leak vol = leak rate x flow detection time + 10 min xleak rate + water residue after valve closes (approx 20 fl oz = 625 ml) 
+ 	- 75 ml/min flow is detected in 80 seconds. Total leak = 75(80/60) + 10(75) + 625 = 1475 ml (=6 cups).
+        - 40 ml/min flow is detected in 6 minutes.  Total leak = 6(40) +10(40) + 625 = 1265 ml (=5 cups). 
+       	- 24 ml/min flow (22 drips/10 sec) is detected in 11 minutes.  Total leak = 11(24) + 10(24) + 625 = 1129 ml (<5 cups).
+  	- Wide open faucet 5.3 liter/min flow would take 10 minutes to shut down.  Leak = 10(5.3)+.625 = 54 liters (14 gal).
+  	 	- Therefore use moisture sensors to close valve immediately.
+  	    
+- Static pressure test results
+	- Typical nightly results range betwwen -.03 and -.09 psi at my house.
  	- pressure decrease will be greater if the test is run soon after the water heater is activated. 
     	- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static pressure test under normal conditions.
     
@@ -69,16 +73,16 @@
 
 
 ## Flow Duration Study
-- Overnight activity followed by shower at 5am.
+- Overnight (no activity) followed by shower at 5am.
 	- Note visual sign of failing toilet seal, which was seen before heard:
       
 ![Toilet Flush](media/ToiLeak.jpg)
 
-- Overnight activity followed by 2 toilet flushes, shower
+- This is a great visual tool to understand the water system.  That seal is getting worse!
 
 ![Shower](media/ToiLeak2.jpg)
 
-- Wash Machine and dishwasher flow signatures indicate max flow duration is less than 5 minutes:
+- Wash Machine flow and dishwasher signatures indicate max flow duration is less than 5 minutes:
 
 ![LaundrySignature](media/LaundrySignature.jpg)
 
@@ -92,16 +96,15 @@
 
 ## Hardware
 - PIR motion sensors with temperature/humidity report to Home Assistant, causing a 20 minute standby.
+- Be sure to use a 100nf decoupling capacitor across temp sensor Vcc and Gnd to prevent spurious PIR hits.
 
 ![PIR_Disassembled](media/PIRDissassembly.jpg)
 
 ![PIR_Assembled](media/PIR_Motion_Detector.jpg)
 
-- The valve is installed between silt filter and charcoal filter.
-
 ## Home Assistant Screens
 
-- These screens will help you complete the picture:
+- These screens will help you navigate your way through the software:
 
 ![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
 
