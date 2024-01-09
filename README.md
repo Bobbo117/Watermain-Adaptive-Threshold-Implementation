@@ -1,4 +1,4 @@
-# Smart-Home-Water-Leak-Detector
+# Watermain Adaptive Threshhold Study
 
 - This project starts with Yang's project at https://github.com/heyitsyang/Whole-House-Water-Leak-Controller .  Optional adaptations:
 	- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
@@ -14,15 +14,14 @@
   	- Water pressure recovers slowly after demand if there is a pressure regulator.
   	- Water flow may not be detected by a static threshhold for slower flow rates or during periods of higher pressure.
   	  
-- How small a leak can we detect without using an impeller?"
+# How small a leak can we detect without using an impeller?"
 	- Water flow duration was measured under various conditions (flush, shower, laundry, dishes, etc.)
 	- An adaptive threshhold was implemented to close the main valve 10 minutes after detecting water flow.
- 		- The data suggest 6 minutes would be safe; I am working slowly toward that number. 
  	- Motion detected in the bathrooms or kitchen cause a 20 minute grace period (for showers, proof of consciousness, etc.).
     
   	- leak vol = leak rate x flow detection time + 10 min xleak rate + water residue after valve closes (approx 20 fl oz = 625 ml) 
  	- 75 ml/min flow is detected in 80 seconds. Total leak = 75(80/60) + 10(75) + 625 = 1475 ml (=6 cups).
-        - 40 ml/min flow is detected in 6 minutes.  Total leak = 6(40) +10(40) + 625 = 1265 ml (=5 cups). 
+        - 40 ml/min flow is detected in 6 minutes.  Total leak = 6(40) +10(40) + 625 = 1265 ml (=5 cups).
        	- 24 ml/min flow (22 drips/10 sec) is detected in 11 minutes.  Total leak = 11(24) + 10(24) + 625 = 1129 ml (<5 cups).
   	- Wide open faucet 5.3 liter/min flow would take 10 minutes to shut down.  Leak = 10(5.3)+.625 = 54 liters (14 gal).
   	 	- Therefore use moisture sensors to close valve immediately.
@@ -94,7 +93,7 @@
 
 ## Home Assistant Screens
 
-- These screens will help you navigate your way through the software:
+- These screens along with Yang's will help you navigate your way through the software:
 
 ![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
 
