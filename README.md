@@ -1,4 +1,4 @@
-# Watermain Adaptive Threshhold Study
+# Watermain Adaptive Threshhold Implementation
 
 - This project starts with Yang's project at https://github.com/heyitsyang/Whole-House-Water-Leak-Controller .  Optional adaptations:
 	- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
