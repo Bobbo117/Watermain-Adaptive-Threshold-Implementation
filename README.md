@@ -101,9 +101,9 @@
 ## Results
 
 - This system has operated 4 months with no unanticipated shutoffs.  
-- Periodic slow leak testing has resulted in the valve closure for the most part.
+- Periodic slow leak testing resulted in the valve closure for the most part.
 - Very slow leak rates may not close the valve, especially if the pressure happens to be on the up cycle.
-   - In this case, the nightly Static Leakage Test picks this up.
+   	- In this case, the nightly Static Leakage Test gives an abnormally high reading.
  
 ## Home Assistant Screens
 
