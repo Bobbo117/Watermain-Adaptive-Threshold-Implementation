@@ -101,6 +101,8 @@
 
 ## Home Assistant Screens
 
+- These screens will help you as you follow the processing in the software:
+
 ![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
 
 ![1](media/20240108_HA_Plot_PIR.jpg)
