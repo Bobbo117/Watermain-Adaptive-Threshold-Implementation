@@ -40,12 +40,13 @@
   	- There is a similar mechanism to calculate the threshhold when the flow stops and the pressure rises again.
   
   - Examples:
-  	- The folllowing cellphone screenshot was taken as pressure was increasing.
+  	
    	- The peak and threshhold are recalculated each time the pressure increases above the prior peak.
 
+	  
 	  ![Increase](media/20240104_165739%20Home%20p%20Incr%20plot.jpg)
 
-	  ![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
+
 	- The following plot shows the pressure decreasing at a rate of .125 psi/10 min; the peak is reduced .25 psi / 10 min until the two meet
 
 	  ![Decrease](media/20240104_174717%20G%20p%20decr.jpg)
@@ -99,6 +100,8 @@
 - Valve is instaled between silt filter and charcoal filter
 
 ## Home Assistant Screens
+
+![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
 
 ![1](media/20240108_HA_Plot_PIR.jpg)
 
