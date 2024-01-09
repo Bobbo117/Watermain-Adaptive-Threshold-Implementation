@@ -56,7 +56,7 @@
 
 	  ![Decrease](media/20240104_174717%20G%20p%20decr.jpg)
 
-    	- Adaptive Threshhold tracking intermittent slow flow
+    	- Adaptive Threshhold operation through two demand cycles:
   
 	![Adaptive2](media/AdaptiveThreshhold2.jpg)
  
