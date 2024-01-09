@@ -52,7 +52,7 @@
 	  ![Increase](media/20240104_165739%20Home%20p%20Incr%20plot.jpg)
 
 
-	- The following plot shows the pressure decreasing at a rate of .125 psi/10 min; the peak is reduced .25 psi / 10 min until the two meet
+	- The following plot shows the pressure decreasing at a rate of .125 psi/10 min; the peak is reduced .25 psi / 10 min until the two meet.
 
 	  ![Decrease](media/20240104_174717%20G%20p%20decr.jpg)
 
