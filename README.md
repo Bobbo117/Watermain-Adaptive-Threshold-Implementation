@@ -23,7 +23,7 @@
         - 40 ml/min flow is detected in 6 minutes.  Total leak = 6(40) +10(40) = 640 ml (<3 cups). 
        	- 24 ml/min flow (22 drips/10 sec) is detected in 11 minutes.  Total leak = 11(24) + 10(24) = 504 ml (2 cups).
   
-- How to interpret nightly static leakage test results
+- How to interpret nightly static pressure test results
 	- Typical nightly results range betwwen -.06 and -.2 psi at my house.
  	- pressure decrease will be greater if the test is run soon after the water heater is activated. 
     	- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static pressure test under normal conditions.
