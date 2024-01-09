@@ -91,17 +91,17 @@
 ![Adaptive](media/AdaptiveThreshold.jpg)
 
 ## Hardware
-- PIR motion sensors with tempeerature/humidity
+- PIR motion sensors with temperature/humidity report to Home Assistant, causing a 20 minute standby.
 
 ![PIR_Disassembled](media/PIRDissassembly.jpg)
 
 ![PIR_Assembled](media/PIR_Motion_Detector.jpg)
 
-- Valve is instaled between silt filter and charcoal filter
+- The valve is installed between silt filter and charcoal filter.
 
 ## Home Assistant Screens
 
-- These screens will help you as you follow the processing in the software:
+- These screens will help you complete the picture:
 
 ![Increase](media/20240104_165739%20Home%20p%20Incr.jpg)
 
