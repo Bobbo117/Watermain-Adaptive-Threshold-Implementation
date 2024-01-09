@@ -91,6 +91,11 @@
 
 ![PIR_Assembled](media/PIR_Motion_Detector.jpg)
 
+## Tips, Tricks, and Traps
+
+- When you go to take a long shower (> 10 minutes), verify that the bathroom motion sensor sees you!  Look for the blue light.
+- For showers longer for 20 minutes, for powerwwash vendors, or other vvendors using water, use the manual override.
+- 
 ## Home Assistant Screens
 
 - These screens along with Yang's will help you navigate your way through the software:
