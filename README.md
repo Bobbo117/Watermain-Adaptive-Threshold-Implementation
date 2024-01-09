@@ -32,7 +32,8 @@
  	- pressure decrease will be greater if the test is run soon after the water heater is activated. 
     	- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static pressure test under normal conditions.
     
-- Adaptive threshhold theory of operation
+## Adaptive Threshhold Theory of Operation
+- The adaptive threshhold is based on a "leaky peak detector".
   	- Leaky peak - If pressure (P) rises above the peak value, the calculated peak pressure is set equal P.
   		- The peak pressure stays constant for the next 10 minutes unless P exceeds it before then.
   	 	- After 10 minutes, the peak is reduced .25 psi if it doesn't go less than P.
@@ -41,7 +42,7 @@
   	- Flow - When P goes below the threshhold, the 10 minute flow timer begins.
   	- Motion Sensors reset the flow timer when motion is detected.
   	 
-  	- There is a similar mechanism to calculate the threshhold when the flow stops and the pressure rises again.
+  	- There is a similar mechanism to determine the threshhold when the flow stops and the pressure rises again.
   
   - Examples:
   	
@@ -54,23 +55,16 @@
 	- The following plot shows the pressure decreasing at a rate of .125 psi/10 min; the peak is reduced .25 psi / 10 min until the two meet
 
 	  ![Decrease](media/20240104_174717%20G%20p%20decr.jpg)
+
+    	- Adaptive Threshhold tracking intermittent slow flow
+  
+	![Adaptive2](media/AdaptiveThreshhold2.jpg)
  
 ## System Operation
 - Based on appliance signatures, a 10 minute flow causes the valve to shut down unless the following conditions exist:
 	- Motion is detected in the bathroom or kitchens, causing a 20 minute standby period.
 	- The manual override switch has been actuated.
 	- Detection of moisture by external sensors caouse immediate valve closure.
-
-## Adaptive Threshhold Theory of Operation
-- The adaptive threshhold is based on a "leaky peak detector".
- 	- It rides 1 psi below the incoming MAX psi as the incoming psi slowly ebbs and flows.
-  	- A faster then normal drop in psi below the threshold initiates the 10 minute flow timer and also sets second thresshold to determine when the flow has stopped.
-   	- If the flow timer reached 10 minutes and the standby timer is not active, the main valve is shut off.
-   	- Motion in the kitchen or bathroom overrides the operation by restting the standby timer.
-   	- Time durations of wash machine and dishwasher cycles were measured to determine timer cutoffs.
-
-
-
 
 ## Flow Duration Study
 - Overnight (no activity) followed by shower at 5am.
@@ -85,10 +79,6 @@
 - Wash Machine flow and dishwasher signatures indicate max flow duration is less than 5 minutes:
 
 ![LaundrySignature](media/LaundrySignature.jpg)
-
-- Adaptive Threshhold tracking intermittent slow flow
-  
-![Adaptive2](media/AdaptiveThreshhold2.jpg)
 
 - Two Flushes and a shower.
   
