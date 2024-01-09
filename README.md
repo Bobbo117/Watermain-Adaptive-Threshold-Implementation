@@ -97,6 +97,13 @@
 - If you go for take a long shower (> 10 minutes), verify that the bathroom motion sensor sees you!  Look for the blue light.
 - For showers longer than 20 minutes, don't forget to wave at the motion sensor once in a while.
 - Be sure to activate the Manual Override switch in the HASS screen for the powerwash vendor or other vendors using water.
+
+## Results
+
+- This system has operated 4 months with no unanticipated shutoffs.  
+- Periodic slow leak testing has resulted in the valve closure for the most part.
+- Very slow leak rates may not close the valve, especially if the pressure happens to be on the up cycle.
+   - In this case, the nightly Static Leakage Test picks this up.
  
 ## Home Assistant Screens
 
