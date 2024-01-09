@@ -1,8 +1,9 @@
 # Watermain Adaptive Threshhold Implementation
 
-- This project starts with Yang's project at https://github.com/heyitsyang/Whole-House-Water-Leak-Controller .  Optional adaptations:
-	- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
-  	- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure.
+- This project starts with Yang's project at https://github.com/heyitsyang/Whole-House-Water-Leak-Controller .
+	- Optional adaptations:
+		- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
+  		- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure.
 	
 - Observations
 	- Plot of one 24 hour pressure profile:
@@ -19,7 +20,7 @@
 	- An adaptive threshhold was implemented to close the main valve 10 minutes after detecting water flow.
  	- Motion detected in the bathrooms or kitchen cause a 20 minute grace period (for showers, proof of consciousness, etc.).
     
-  	- leak vol = leak rate x flow detection time + 10 min xleak rate + water residue after valve closes (approx 20 fl oz = 625 ml) 
+  	- Leak vol = leak rate x flow detection time + 10 min xleak rate + water residue after valve closes (approx 20 fl oz = 625 ml) 
  	- 75 ml/min flow is detected in 80 seconds. Total leak = 75(80/60) + 10(75) + 625 = 1475 ml (=6 cups).
         - 40 ml/min flow is detected in 6 minutes.  Total leak = 6(40) +10(40) + 625 = 1265 ml (=5 cups).
        	- 24 ml/min flow (22 drips/10 sec) is detected in 11 minutes.  Total leak = 11(24) + 10(24) + 625 = 1129 ml (<5 cups).
@@ -28,7 +29,7 @@
   	    
 - Static pressure test results
 	- Typical nightly results range betwwen -.03 and -.09 psi at my house.
- 	- pressure decrease will be greater if the test is run soon after the water heater is activated. 
+ 	- Pressure decrease will be greater if the test is run soon after the water heater is activated. 
     	- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static pressure test under normal conditions.
     
 # Adaptive Threshhold Theory of Operation
@@ -93,9 +94,10 @@
 
 ## Tips, Tricks, and Traps
 
-- When you go to take a long shower (> 10 minutes), verify that the bathroom motion sensor sees you!  Look for the blue light.
-- For showers longer for 20 minutes, for powerwwash vendors, or other vvendors using water, use the manual override.
-- 
+- If you go for take a long shower (> 10 minutes), verify that the bathroom motion sensor sees you!  Look for the blue light.
+- For showers longer than 20 minutes, don't forget to wave at the motion sensor once in a while.
+- Be sure to activate the Manual Override switch in the HASS screen for powerwwash vendors or other vendors using water.
+ 
 ## Home Assistant Screens
 
 - These screens along with Yang's will help you navigate your way through the software:
