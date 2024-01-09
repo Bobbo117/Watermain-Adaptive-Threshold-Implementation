@@ -64,7 +64,7 @@
 - Based on appliance signatures, a 10 minute flow causes the valve to shut down unless the following conditions exist:
 	- Motion is detected in the bathroom or kitchens, causing a 20 minute standby period.
 	- The manual override switch has been actuated.
-	- Detection of moisture by external sensors caouse immediate valve closure.
+	- Detection of moisture by external sensors cause immediate valve closure.
 
 ## Flow Duration Study
 - Overnight (no activity) followed by shower at 5am.
@@ -72,7 +72,7 @@
       
 ![Toilet Flush](media/ToiLeak.jpg)
 
-- This is a great visual tool to understand the water system.  That seal is getting worse!
+- This is a great visual tool to monitor the water system.  That seal is getting worse!
 
 ![Shower](media/ToiLeak2.jpg)
 
@@ -96,7 +96,7 @@
 
 - If you go for take a long shower (> 10 minutes), verify that the bathroom motion sensor sees you!  Look for the blue light.
 - For showers longer than 20 minutes, don't forget to wave at the motion sensor once in a while.
-- Be sure to activate the Manual Override switch in the HASS screen for powerwwash vendors or other vendors using water.
+- Be sure to activate the Manual Override switch in the HASS screen for the powerwash vendor or other vendors using water.
  
 ## Home Assistant Screens
 
