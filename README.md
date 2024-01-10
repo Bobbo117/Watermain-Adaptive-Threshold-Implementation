@@ -6,7 +6,7 @@
   		- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure.
 	
 - Observations
-	- Plot of one 24 hour pressure profile:
+	- Typical 24 hour pressure profile:
   
  	![Day](media/20240108_DAY_Plot.jpg)
 
