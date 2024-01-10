@@ -37,11 +37,10 @@
   	- Leaky peak - If pressure (P) rises above the peak value, the calculated peak pressure is set equal P.
   		- The peak pressure stays constant for the next 10 minutes unless P exceeds it before then.
   	 	- After 10 minutes, the peak is reduced .25 psi if it doesn't go less than P.
-  		- As P falls, the calculated peak pressure generally falls at a slower rate.  Hence, the term leaky peak.
+  		- If P rate of decrease exceeds .25psi/10 min, the calculated peak pressure decreases at a slower rate.  Hence, the term leaky peak.
   	- Threshhold - The threshhold that defines flow is set at 1 psi below the most recent calculated leaky peak pressure.
   	- Flow - When P goes below the threshhold, the 10 minute flow timer begins.
   	- Motion Sensors reset the flow timer when motion is detected.
-  	 
   	- There is a similar mechanism to determine the threshhold when the flow stops and the pressure rises again.
   
   - Examples:
@@ -97,15 +96,15 @@
 
 - If you go for take a long shower (> 10 minutes), verify that the bathroom motion sensor sees you!  Look for the blue light.
 - For showers longer than 20 minutes, don't forget to wave at the motion sensor once in a while.
-- Be sure to activate the Manual Override switch in the HASS screen for the powerwash vendor or other vendors using water.
+- Activate the Manual Override switch in the HASS screen for the powerwash vendor or other vendors using water.
 
 ## Results
 
-- This system has operated 4 months with no unanticipated shutoffs.  
-- Periodic slow leak testing resulted in the valve closure for the most part.
+- This system has operated 6 months with no unanticipated shutoffs.  
 - Very slow leak rates may not close the valve, especially if the pressure happens to be on the up cycle.
    	- In this case, the nightly Static Leakage Test gives an abnormally high reading.
- 
+- While this mechanism is not as sensitive as an impeller, it provides an added layer of protection without the expense.
+
 ## Home Assistant Screens
 
 - These screens along with Yang's will help you navigate your way through the software:
@@ -115,8 +114,6 @@
 ![1](media/20240108_HA_Plot_PIR.jpg)
 
 ![2](media/20240108_HA_Settings.jpg)
-
-![3](media/20240108_HA_Settings2.jpg)
 
 ![4](media/20240108_HA_full.jpg)
 
