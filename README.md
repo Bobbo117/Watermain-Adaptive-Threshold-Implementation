@@ -1,4 +1,4 @@
-# Watermain Adaptive Threshhold Implementation
+# Watermain Adaptive Threshold Implementation
 
 - This project starts with Yang's project at https://github.com/heyitsyang/Whole-House-Water-Leak-Controller .
 	- Optional adaptations:
@@ -55,7 +55,7 @@
 
 	  ![Decrease](media/20240104_174717%20G%20p%20decr.jpg)
 
-    	- Adaptive Threshhold operation through two demand cycles:
+    	- Adaptive Threshold operation through two demand cycles:
   
 	![Adaptive2](media/AdaptiveThreshhold2.jpg)
  
