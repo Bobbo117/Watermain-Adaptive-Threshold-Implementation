@@ -25,7 +25,7 @@
         - 40 ml/min flow is detected in 6 minutes.  Total leak = 6(40) +10(40) + 625 = 1265 ml (=5 cups).
        	- 24 ml/min flow (22 drips/10 sec) is detected in 11 minutes.  Total leak = 11(24) + 10(24) + 625 = 1129 ml (<5 cups).
   	- Wide open faucet 5.3 liter/min flow would take 10 minutes to shut down.  Leak = 10(5.3)+.625 = 54 liters (14 gal).
-  	 	- Therefore use moisture sensors to close valve immediately.
+  	 	- Therefore use moisture sensors to close valve immediately for larger volumes.
   	    
 - Static pressure test results
 	- Typical nightly results range betwwen -.03 and -.09 psi at my house.
