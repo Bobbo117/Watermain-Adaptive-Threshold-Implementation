@@ -15,8 +15,8 @@
   	- Water pressure recovers slowly after demand if there is a pressure regulator.
   	- Water flow may not be detected by a static threshhold for slower flow rates or during periods of higher pressure.
   	  
-- How small a leak can we detect without using an impeller?"
-	- Water flow duration was measured under various conditions (flush, shower, laundry, dishes, etc.)
+## How small a leak can we detect without using an impeller?"
+- Water flow duration was measured under various conditions (flush, shower, laundry, dishes, etc.)
 	- An adaptive threshhold was implemented to close the main valve 10 minutes after detecting water flow.
  	- Motion detected in the bathrooms or kitchen cause a 20 minute grace period (for showers, proof of consciousness, etc.).
     
@@ -32,7 +32,7 @@
  	- Pressure decrease will be greater if the test is run soon after the water heater is activated. 
     	- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static pressure test under normal conditions.
     
-# Adaptive Threshhold Theory of Operation
+## Adaptive Threshhold Theory of Operation
 - The adaptive threshhold is based on a "leaky peak detector".
   	- Leaky peak - If pressure (P) rises above the peak value, the calculated peak pressure is set equal P.
   		- The peak pressure stays constant for the next 10 minutes unless P exceeds it before then.
