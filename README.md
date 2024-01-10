@@ -65,6 +65,7 @@
 	- Motion is detected in the bathroom or kitchens, causing a 20 minute standby period.
 	- The manual override switch has been actuated.
 	- Detection of moisture by external sensors cause immediate valve closure.
+ 	- Monitor daily leakage test and graphical representation to catch other issues.
 
 ## Flow Duration Study
 - Overnight (no activity) followed by shower at 5am.
