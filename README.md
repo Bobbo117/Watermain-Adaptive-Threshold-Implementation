@@ -29,7 +29,7 @@
   	    
 - Static pressure test results
 	- Typical nightly results range betwwen -.03 and -.09 psi at my house.
- 	- Pressure decrease will be greater (-. 38 psi +-) if the test is run soon after the water heater has been activated and the pressure tank has peaked and is on the doewswing. 
+ 	- Pressure decrease will be greater (-. 38 psi +-) if the test is run soon after the water heater has been activated and the pressure tank has peaked and is on the downswing. 
     	- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static pressure test under normal conditions.
     
 ## Adaptive Threshhold Theory of Operation
