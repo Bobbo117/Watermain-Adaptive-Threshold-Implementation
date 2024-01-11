@@ -27,10 +27,13 @@
   	- Wide open faucet 5.3 liter/min flow would take 10 minutes to shut down.  Leak = 10(5.3)+.625 = 54 liters (14 gal).
   	 	- Therefore use moisture sensors to close valve immediately for larger volumes.
   	    
-- Static pressure test results
-	- Typical nightly results range betwwen -.03 and -.09 psi at my house.
- 	- Pressure decrease will be greater (-. 38 psi +-) if the test is run soon after the water heater has been activated and the pressure tank has peaked and is on the downswing. 
-    	- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static pressure test under normal conditions.
+## Static pressure test results:
+
+- Typical nightly results range betwwen     -.03 and -.09 psi at my house.
+
+- Pressure decrease will be greater (-. 38 psi +-) if the test is run soon after the water heater has been activated and the pressure tank has peaked and is on the downswing. 
+
+- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static pressure test under normal conditions.
     
 ## Adaptive Threshhold Theory of Operation
 - The adaptive threshhold is based on a "leaky peak detector".
