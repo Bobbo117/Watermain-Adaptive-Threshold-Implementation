@@ -17,10 +17,10 @@
   	  
 ## How small a leak can we detect without using an impeller?"
 - Water flow duration was measured under various conditions (flush, shower, laundry, dishes, etc.)
-	- An adaptive threshhold was implemented to close the main valve 10 minutes after detecting water flow.
+	- An adaptive threshhold was devised to close the main valve 10 minutes after detecting water flow.
  	- Motion detected in the bathrooms or kitchen cause a 20 minute grace period (for showers, proof of consciousness, etc.).
     
-  	- Leak vol = leak rate x flow detection time + 10 min xleak rate + water residue after valve closes (approx 20 fl oz = 625 ml) 
+  	- Leak vol = leak rate x flow detection time + 10 min x leak rate + water residue after valve closes (approx 20 fl oz = 625 ml) 
  	- 75 ml/min flow is detected in 80 seconds. Total leak = 75(80/60) + 10(75) + 625 = 1475 ml (=6 cups).
         - 40 ml/min flow is detected in 6 minutes.  Total leak = 6(40) +10(40) + 625 = 1265 ml (=5 cups).
        	- 24 ml/min flow (22 drips/10 sec) is detected in 11 minutes.  Total leak = 11(24) + 10(24) + 625 = 1129 ml (<5 cups).
@@ -29,7 +29,7 @@
   	    
 - Static pressure test results
 	- Typical nightly results range betwwen -.03 and -.09 psi at my house.
- 	- Pressure decrease will be greater if the test is run soon after the water heater is activated. 
+ 	- Pressure decrease will be greater (-. 38 psi +-) if the test is run soon after the water heater has been activated and the pressure tank has peaked and is on the doewswing. 
     	- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static pressure test under normal conditions.
     
 ## Adaptive Threshhold Theory of Operation
