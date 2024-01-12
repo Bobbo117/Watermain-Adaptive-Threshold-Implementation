@@ -70,7 +70,7 @@
  	- Monitor daily leakage test and graphical representation to catch other issues.
 
 ## Flow Duration Study
-- Overnight (no activity) followed by shower at 5am.
+- Overnight followed by shower at 5am.
 	- Note visual sign of failing toilet seal, which was seen before heard:
       
 ![Toilet Flush](media/ToiLeak.jpg)
