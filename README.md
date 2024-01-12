@@ -29,7 +29,7 @@
   	    
 ## Static pressure test results:
 
-- Typical nightly results range betwwen     -.03 and -.09 psi at my house.
+- Typical nightly results range betwwen     -.03 and -.15 psi at my house.
 
 - Pressure decrease will be greater (-. 38 psi +-) if the test is run soon after the water heater has been activated and the pressure tank has peaked and is on the downswing. 
 
