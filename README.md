@@ -123,7 +123,7 @@
 
 - While this mechanism is not as sensitive as an impeller, it provides an added layer of protection without the expense.
   
-- This project could help you become as one with your plumbing system!
+- This is a great project for those who want to become as one with their plumbing system. 
 
 
 
