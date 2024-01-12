@@ -41,14 +41,14 @@
   		- The peak pressure stays constant for the next 10 minutes unless P exceeds it before then.
   	 	- After 10 minutes, the peak is reduced .25 psi if it doesn't go less than P.
   		- If P rate of decrease exceeds .25psi/10 min, the calculated peak pressure decreases at a slower rate.  Hence, the term leaky peak.
-  	- Threshhold - The threshhold that defines flow is set at 1 psi below the most recent calculated leaky peak pressure.
+  	- Threshhold(T) - The threshhold that defines flow is set at 1 psi below the most recent calculated leaky peak pressure.
   	- Flow - When P goes below the threshhold, the 10 minute flow timer begins.
   	- Motion Sensors reset the flow timer when motion is detected.
   	- There is a similar mechanism to determine the threshhold when the flow stops and the pressure rises again.
   
   - Examples:
   	
-   	- The peak and threshhold are recalculated each time the pressure increases above the prior peak.
+   	- The peak and threshhold(T) are recalculated each time the pressure increases above the prior peak.
 
 	  
 	  ![Increase](media/20240104_165739%20Home%20p%20Incr%20plot.jpg)
