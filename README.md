@@ -56,10 +56,16 @@
 
 	- The following plot shows the pressure decreasing at a rate of .125 psi/10 min; the peak is reduced .25 psi / 10 min until the two meet.
 
+  	- This is an example of the threshold tracking the normal ebb and flow of psi.
+
 	  ![Decrease](media/20240104_174717%20G%20p%20decr.jpg)
 
-    	- Adaptive Threshold operation through two demand cycles:
-  
+   	- Adaptive Threshold operation through two demand cycles:
+       
+	- We see that at 8:27 when pressure drops below threshold (flow begins) the threshold flips to above the psi to define when flow stops.
+ 
+   	- At around 8:33 the psi goes above the threshold, (flow stops), and the threshhold once again tracks 1 psi below the newest max psi.
+      
 	![Adaptive2](media/AdaptiveThreshhold2.jpg)
  
 ## System Operation
@@ -70,7 +76,7 @@
  	- Monitor daily leakage test and graphical representation to catch other issues.
 
 ## Flow Duration Study
-- Overnight followed by shower at 5am.
+- Overnight activity followed by shower at 6 am.
 	- Note visual sign of failing toilet seal, which was seen before heard:
       
 ![Toilet Flush](media/ToiLeak.jpg)
@@ -90,6 +96,7 @@
 ## Hardware
 - PIR motion sensors with temperature/humidity report to Home Assistant, causing a 20 minute standby.
 - Be sure to use a 100nf decoupling capacitor across temp sensor Vcc and Gnd to prevent spurious PIR hits.
+- Use most any ESP here.  Standardizing with ESP32 keeps my life simple, if inelegant.
 
 ![PIR_Disassembled](media/PIRDissassembly.jpg)
 
@@ -100,12 +107,13 @@
 - If you take a long shower (> 10 minutes), verify that the bathroom motion sensor sees you!  Look for the blue light.
 - For showers longer than 20 minutes, don't forget to wave at the motion sensor once in a while.
 - Activate the Manual Override switch in the HASS screen for the powerwash vendor or other vendors using water.
+- Keep an eye on the motion sensors.  I one stops working, you could be in for a surprise in the shower at about 10 minutes.
 
 ## Results
 
 - This system has operated 6 months with no unanticipated shutoffs.  
 - Very slow leak rates may not close the valve, especially if the pressure happens to be on the up cycle.
-   	- In this case, the nightly Static Leakage Test gives an abnormally high reading.
+   	- In this case, the nightly Static Pressure Test gives an abnormally high reading.
 
 ## Home Assistant Screens
 
