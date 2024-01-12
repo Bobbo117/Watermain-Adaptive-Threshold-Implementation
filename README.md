@@ -64,7 +64,7 @@
        
 	- We see that at 8:27 when pressure drops below threshold (flow begins) the threshold flips to above the psi to define when flow stops.
  
-   	- At around 8:33 the psi goes above the threshold, (flow stops), and the threshhold once again tracks 1 psi below the newest max psi.
+   	- At around 8:33 the psi goes above the threshold, (flow stops), and the threshhold once again tracks below the newest max psi.
       
 	![Adaptive2](media/AdaptiveThreshhold2.jpg)
  
