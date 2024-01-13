@@ -129,9 +129,9 @@
 
 ## Conclusions
 
-- While this mechanism is not as sensitive as an impeller, it provides an added layer of protection without the expense.
+- While this adaptive threshold mechanism is not as sensitive as an impeller, it provides an added layer of protection without the expense.
   
-- This is a great project for those who want to become as one with their plumbing system while simultaneously protecting against one of the most frequent insurance claims. 
+- This is a great project for those who want to become as one with their plumbing system while simultaneously protecting against the cause one of the most frequent and expensive insurance claims. 
 
 
 
