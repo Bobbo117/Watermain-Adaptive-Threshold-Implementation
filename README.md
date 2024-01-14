@@ -56,7 +56,7 @@
 
 	- The following plot shows the pressure decreasing at a rate of .125 psi/10 min; the peak is reduced .25 psi / 10 min until the two meet.
 
-  	- The plot abaove and below demonstrate an example of the threshold tracking the normal ebb and flow of psi without tripping the threshld.
+  	- The plots above and below demonstrate an example of the threshold tracking the normal ebb and flow of psi without tripping the flow threshld.
 
 	  ![Decrease](media/20240104_174717%20G%20p%20decr.jpg)
 
@@ -131,7 +131,7 @@
 
 - While this adaptive threshold mechanism is not as sensitive as an impeller, it provides an added layer of protection without the expense.
   
-- This is a great project for those who want to become as one with their plumbing system while simultaneously protecting against the cause one of the most frequent and expensive insurance claims. 
+- This is a great project for those who want to become as one with their plumbing system while simultaneously protecting against the cause one of the more frequent and expensive insurance claims. 
 
 
 
