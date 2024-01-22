@@ -48,7 +48,7 @@
   
   - Examples:
   	
-   	- The peak and threshhold(T) are recalculated each time the pressure increases above the prior peak.
+   	- The peak and threshhold (T) are recalculated each time the pressure increases above the prior peak.
 
 	  
 	  ![Increase](media/20240104_165739%20Home%20p%20Incr%20plot.jpg)
@@ -131,7 +131,7 @@
 
 - While this adaptive threshold mechanism is not as sensitive as an impeller, it provides an added layer of protection without the expense.
   
-- This is a great project for those who want to become as one with their plumbing system while simultaneously protecting against the cause one of the more frequent and expensive insurance claims. 
+- This is a great project for those who want to become as one with their plumbing system while simultaneously protecting against one of the more frequent and expensive insurance claims. 
 
 
 
