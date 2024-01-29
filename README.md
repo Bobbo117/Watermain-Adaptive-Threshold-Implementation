@@ -88,9 +88,9 @@
 
 ![LaundrySignature](media/LaundrySignature.jpg)
 
-- Two Flushes and a shower.
+- Morning routine including shower:
   
-![Adaptive](media/AdaptiveThreshold.jpg)
+![Adaptive](media/Morning routine incl shower.jpg)
 
 ## Hardware
 - PIR motion sensors with optional temperature/humidity report to Home Assistant, causing a 20 minute standby.
