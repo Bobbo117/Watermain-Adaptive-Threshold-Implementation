@@ -4,7 +4,13 @@
 	- Optional adaptations:
 		- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
   		- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure.
-	
+ 
+   - Software Adjustments are minimal:
+		- New variable definitions and mqtt topics are appended at the beginning.
+  		- New command topics are appended to the mqtt callback function.
+		- New processing is appended at the end of the loop() function.
+		- Two new threshold functions are added at the end of the code, just after the loop function.
+    
 - Observations
 	- Typical 24 hour pressure profile:
   
@@ -15,11 +21,10 @@
   	- Water pressure recovers slowly after demand if there is a pressure regulator.
   	- Water flow may not be detected by a static threshhold for slower flow rates or during periods of higher pressure.
   	  
-## How small a leak can we detect without using an impeller?"
+## How small a leak can we detect without using an impeller?
 - Water flow duration was measured under various conditions (flush, shower, laundry, dishes, etc.)
 	- An adaptive threshhold was devised to close the main valve 10 minutes after detecting water flow.
  	- Motion detected in the bathrooms or kitchen cause a 20 minute grace period (for showers, proof of consciousness, etc.).
-    
   	- Leak vol = leak rate x flow detection time + 10 min x leak rate + water residue after valve closes (approx 20 fl oz = 625 ml) 
  	- 75 ml/min flow is detected in 80 seconds. Total leak = 75(80/60) + 10(75) + 625 = 1475 ml (=6 cups).
         - 40 ml/min flow is detected in 6 minutes.  Total leak = 6(40) +10(40) + 625 = 1265 ml (=5 cups).
@@ -29,11 +34,11 @@
   	    
 ## Static pressure test results:
 
-- Typical nightly results range betwwen     -.03 and -.15 psi at my house.
+- Typical nightly results range betwwen -.03 and -.15 psi at my house.
 
-- Pressure decrease will be greater (-. 38 psi +-) if the test is run soon after the water heater has been activated and the pressure tank has peaked and is on the downswing. 
+- Pressure decrease is greater (-. 38 psi +-) if the test is run soon after the water heater has been activated and the pressure tank has peaked and is on the downswing. 
 
-- A 24 ml/min leak will cause a 3.44 psi drop during the nightly static pressure test under normal conditions.
+- A 24 ml/min leak causes a 3.44 psi drop during the nightly static pressure test under normal conditions.
     
 ## Adaptive Threshhold Theory of Operation
 - The adaptive threshhold is based on a "leaky peak detector".
@@ -81,7 +86,7 @@
       
 ![Toilet Flush](media/ToiLeak.jpg)
 
-- This is a great visual tool to monitor the water system.  That seal is getting worse!
+- This is a great visual tool to monitor the water system.  That seal is getting worse!  Still could not hear it to identify  it. 
 
 ![Shower](media/ToiLeak2.jpg)
 
