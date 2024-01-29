@@ -4,12 +4,6 @@
 	- Optional adaptations:
 		- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
   		- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure.
- 
-   - Software Adjustments are minimal:
-		- New variable definitions and mqtt topics are appended at the beginning.
-  		- New command topics are appended to the mqtt callback function.
-		- New processing is appended at the end of the loop() function.
-		- Two new threshold functions are added at the end of the code after the loop function.
     
 - Observations
 	- Typical 24 hour pressure profile:
@@ -107,11 +101,18 @@
 
 ![PIR_Assembled](media/PIR_Motion_Detector.jpg)
 
+## Software 
+ - Adjustments are minimal:
+	- New variable definitions and mqtt topics are appended at the beginning.
+  	- New command topics are appended to the mqtt callback function.
+	- New processing is appended at the end of the loop() function.
+	- Two new threshold functions are added at the end of the code after the loop function.
+  
 ## Tips, Tricks, and Traps
 
 - If you take a long shower (> 10 minutes), verify that the bathroom motion sensor sees you!  Look for the blue light.
 - For showers longer than 20 minutes, don't forget to wave at the motion sensor once in a while.
-- Activate the Manual Override switch in the HASS screen for the powerwash vendor or other vendors using water.
+- Activate the Manual Override switch in the HA screen for the powerwash vendor or other vendors using water.
 - Keep an eye on the motion sensors.  If one stops working, you could be in for a surprise in the shower at about 10 minutes.
 
 ## Results
