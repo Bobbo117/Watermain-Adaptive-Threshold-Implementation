@@ -86,7 +86,7 @@
       
 ![Toilet Flush](media/ToiLeak.jpg)
 
-- This is a great visual tool to monitor the water system.  That seal is getting worse!  Still could not hear it to identify  it. 
+- This is a great visual tool to monitor the water system.  That seal is getting worse!  Still can not hear it to identify it. 
 
 ![Shower](media/ToiLeak2.jpg)
 
