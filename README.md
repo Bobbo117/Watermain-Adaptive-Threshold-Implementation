@@ -102,11 +102,11 @@
 ![PIR_Assembled](media/PIR_Motion_Detector.jpg)
 
 ## Software 
- - Adjustments are minimal:
+ - Software adjustments are minimal:
 	- New variable definitions and mqtt topics are appended at the beginning.
   	- New command topics are appended to the mqtt callback function.
 	- New processing is appended at the end of the loop() function.
-	- Two new threshold functions are added at the end of the code after the loop function.
+	- Two new threshold functions are appended at the end of the code after the loop function.
   
 ## Tips, Tricks, and Traps
 
