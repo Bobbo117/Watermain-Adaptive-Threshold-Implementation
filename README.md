@@ -103,7 +103,7 @@
 - PIR motion sensors with optional temperature/humidity report to Home Assistant, causing a 20 minute standby.
 - Be sure to use a 100nf decoupling capacitor across temp sensor Vcc and Gnd to prevent spurious PIR hits.
 - Use most any ESPxyz here.  Standardizing with ESP32 keeps my life simple, if inelegant.
-- Softwaare for the PIR sensor is at https://github.com/Bobbo117/Whole-House-Water-Leak-Controller .
+- Software for the PIR sensor is at https://github.com/Bobbo117/Cellular-IoT-Monitor/blob/main/src/AmbientAP/AmbientAP.ino .
 	-  Use ID 4,5,and 6. 	
 
 ![PIR_Disassembled](media/PIRDissassembly.jpg)
