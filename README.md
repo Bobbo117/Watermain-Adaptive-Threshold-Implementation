@@ -3,7 +3,7 @@
 - This project starts with Yang's project at https://github.com/heyitsyang/Whole-House-Water-Leak-Controller .
 	- Optional adaptations:
 		- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
-  		- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure.
+  		- Standard enclosure is substituted for custom 3D printed electronics enclosure.
                 ![Install](media/Installation.jpg)
     
 - Observations
@@ -62,9 +62,9 @@
 
    	- Adaptive Threshold operation through two demand cycles:
        
-	- We see that at 8:27 when pressure drops below threshold (flow begins) the threshold flips to above the psi to define when flow stops.
+	- We see that at 8:11 and 8:27 when pressure drops below threshold (flow begins) the threshold flips to above the psi to define when flow stops.
  
-   	- At around 8:33 the psi goes above the threshold, (flow stops), and the threshhold once again tracks below the newest max psi.
+   	- At around 8:14 and 8:33 the psi goes above the threshold, (flow stops), and the threshhold once again tracks below the newest max psi.
       
 	![Adaptive2](media/AdaptiveThreshhold2.jpg)
  
@@ -85,15 +85,17 @@
 
 ![Shower](media/ToiLeak2.jpg)
 
-- Wash Machine flow and dishwasher signatures indicate max flow duration is only a few minutes:
+- Wash Machine flow and dishwasher signatures indicate max flow duration is only a few minutes.
+- Laundry:
 
 ![LaundrySignature](media/LaundrySignature.jpg)
+
+-Dishwasher:
 
 ![Dishwasher](media/DishwasherSignature.jpg)
 
 - Morning routine including shower:
-  
-  
+
 ![Adaptive](media/Morning_routine_incl_shower.jpg)
 
 
@@ -107,7 +109,7 @@
 ![PIR_Assembled](media/PIR_Motion_Detector.jpg)
 
 ## Software 
- - Software adjustments are minimal:
+ - Adjustments to the original Watermain software are minimal:
 	- New variable definitions and mqtt topics are appended at the beginning.
   	- New command topics are appended to the mqtt callback function.
 	- New processing is appended at the end of the loop() function.
