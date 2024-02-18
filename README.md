@@ -86,11 +86,11 @@
 ![Shower](media/ToiLeak2.jpg)
 
 - Wash Machine flow and dishwasher signatures indicate max flow duration is only a few minutes.
-- Laundry:
+	- Laundry:
 
 ![LaundrySignature](media/LaundrySignature.jpg)
 
--Dishwasher:
+	- Dishwasher:
 
 ![Dishwasher](media/DishwasherSignature.jpg)
 
