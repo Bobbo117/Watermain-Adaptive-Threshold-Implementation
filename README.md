@@ -4,6 +4,7 @@
 	- Optional adaptations:
 		- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
   		- Standard electronics enclosure is substituted for custom 3D printed electronics enclosure.
+                ![Install](media/Installation.jpg)
     
 - Observations
 	- Typical 24 hour pressure profile:
@@ -84,10 +85,11 @@
 
 ![Shower](media/ToiLeak2.jpg)
 
-- Wash Machine flow and dishwasher signatures indicate max flow duration is less than 5 minutes:
+- Wash Machine flow and dishwasher signatures indicate max flow duration is only a few minutes:
 
 ![LaundrySignature](media/LaundrySignature.jpg)
 
+![Dishwasher](media/DishwasherSignature.jpg)
 
 - Morning routine including shower:
   
