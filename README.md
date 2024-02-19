@@ -106,8 +106,8 @@
 - Add a white Ailkin USB power adapter and some velcro tape to the assembly and plug it in.
 	- The blue LED is easily visible when motion is detected.
 - Software for the PIR sensor is at https://github.com/Bobbo117/Cellular-IoT-Monitor/blob/main/src/AmbientAP/AmbientAP.ino .
-	-  Enable HA so that it will communicate with home assistant.
-	-  Use Casa_1 ID 4 (kitchen), 5 (bathroom), and 6 (bathroom2) for up to three PIR sensors.
+	-  Enable HA so that it will communicate with home assistant or an alternative destnation.
+	-  Use CASA_1 ID 4 (kitchen), 5 (bathroom), and 6 (bathroom2) for up to three PIR sensors.
    	-  These IDs will send the topics kithcen/pir, bathroom/pir, and bathroom2/pir respectively.
  	
 ![PIR_Disassembled](media/PIRDissassembly.jpg)
