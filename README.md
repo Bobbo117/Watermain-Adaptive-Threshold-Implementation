@@ -2,7 +2,7 @@
 
 - This project starts with Yang's project at https://github.com/heyitsyang/Whole-House-Water-Leak-Controller .
 	- Components
- 		- Home Assistant
+ 		- Home Assistant (Scroll to the bottom to view screen shots)
 		- Zigbee leak sensors 	
  		- Valve Controller communicates with Home Asistant using MQTT regarding
    			- Water Pressure Sensor
