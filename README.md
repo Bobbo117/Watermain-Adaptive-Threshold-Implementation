@@ -1,11 +1,22 @@
 # Watermain Adaptive Threshold Implementation
 
 - This project starts with Yang's project at https://github.com/heyitsyang/Whole-House-Water-Leak-Controller .
-	- Optional adaptations:
+	- Components
+ 		- Home Assistant
+		- Zigbee leak sensors 	
+ 		- Valve Controller communicates with Home Asistant using MQTT regarding
+   			- Water Pressure Sensor
+     			- Motorized Valve
+       		
+	- Optional Valve Controller adaptations:
 		- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
   		- Standard enclosure is substituted for custom 3D printed electronics enclosure.
                 ![Install](media/Installation.jpg)
     
+- Additions for adaptive threshhold implementation
+	- Motion detectors in kitchen and bathrooms communicate via MQTT
+ 	- Home Assistant and Valve Controller software adjustments
+
 - Observations
 	- Typical 24 hour pressure profile:
   
