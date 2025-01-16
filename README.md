@@ -12,7 +12,7 @@
 		- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
   		- Standard enclosure is substituted for custom 3D printed electronics enclosure.
       
-                ![Install](media/Installation.jpg)
+![Install](media/Installation.jpg)
     
 - Additions for adaptive threshhold implementation
 	- Motion detectors in kitchen and bathrooms communicate via MQTT
