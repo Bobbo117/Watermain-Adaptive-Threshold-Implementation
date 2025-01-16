@@ -6,7 +6,7 @@
 		- Zigbee leak sensors 	
  		- Valve Controller communicates with Home Asistant using MQTT regarding
    			- Water Pressure Sensor
-     			- Motorized Valve
+			- Motorized Valve
        		
 	- Optional Valve Controller adaptations:
 		- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
@@ -141,7 +141,7 @@
 
 ## Results
 
-- This system has operated 6 months with no unanticipated shutoffs.  
+- This system has operated since March 2022 with no unanticipated shutoffs.  
 - Very slow leak rates may not close the valve, especially if the pressure happens to be on the up cycle.
    	- In this case, the nightly Static Pressure Test gives an abnormally high reading that should be followed up.
 
