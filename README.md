@@ -208,8 +208,6 @@
 - If you take a long shower (> 10 minutes), verify that the bathroom motion sensor sees you!  Look for the blue light.
   
 - Activate the Manual Override switch in the Home Assistant control screen for the powerwash vendor or other vendors using water.
-  
-- Keep an eye on the motion sensors.  If one stops working, you could be in for a surprise in the shower at about 10 minutes.  When you walk by one, a blue light acknowledges you.
 
 ## Results
 
@@ -219,7 +217,9 @@
   
    	- In this case, the nightly Static Pressure Test gives an abnormally high reading that should be followed up.
 
-- Recently the Static Pressure Test gave excessive readings several nights in a row. This led to discovery that an outside faucet had not been closed tifgtly. There was no visible flow, just an occasional drip.
+- Recently the Static Pressure Test gave excessive readings several nights in a row. This led to discovery that an outside faucet had not been closed tightly. There was no visible flow, just an occasional drip.
+
+- It turns out that the PIR motion detectors are unnecessary at our house, because we have no continous flows close to 10 minutes.  Appliances don't draw water more than a few minutes at a time, and there are no long showerers.
 
 - This system provides and added way to detect impending problems like the leaking toilet seal described above.  The graphic dispaly of psi over time adds a new dimension.  
 
