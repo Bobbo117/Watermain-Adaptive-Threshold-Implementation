@@ -27,24 +27,25 @@
     
 ## Why Bother?
 
-	- Detect degraded plumbing joints that cause undetected leaks behind walls
+- Detect degraded plumbing joints that cause undetected leaks behind walls
 
-   	- Friend who purchased house with prior insurance claim for this issue was denied insurance
+- Friend who purchased house with prior insurance claim for this issue was denied insurance
  
-   	- Impellors corrode and stick over time; added installation and maintenance expense
+- Impellors corrode and stick over time; added installation and maintenance expense
 
 ## Observations
-	- Typical 24 hour pressure profile:
+
+- Typical 24 hour pressure profile:
   
  ![Day](media/20240108_DAY_Plot.jpg)
 
-  	- Water pressure varies several psi during the course of a day.
+  	- Water pressure varies several psi during the course of a day
   	
-   	- Water pressure spikes when water heater is active.
+   	- Water pressure spikes when water heater is active
   	
-   	- Water pressure recovers slowly after demand if there is a pressure regulator.
+   	- Water pressure recovers slowly after demand if there is a pressure regulator
   	
-   	- Water flow may not be detected by a static threshhold for slower flow rates or during periods of higher pressure.
+   	- Water flow may not be detected by a static threshhold for slower flow rates or during periods of higher pressure
   	  
 ## How small a leak can we detect without using an impeller?
 
