@@ -27,11 +27,11 @@
     
 ## Why Bother?
 
-	- Detect degraded plumbing joints the cause undetected leaks behind walls
+	- Detect degraded plumbing joints that cause undetected leaks behind walls
 
    	- Friend who purchased house with prior insurance claim for this issue was denied insurance
  
-   	- Impellors corrode and stick ovver time; added installation and maintenance expense
+   	- Impellors corrode and stick over time; added installation and maintenance expense
 
 ## Observations
 	- Typical 24 hour pressure profile:
