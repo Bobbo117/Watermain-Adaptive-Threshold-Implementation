@@ -15,7 +15,9 @@
 ![Install](media/Installation.jpg)
     
 - Additions for adaptive threshhold implementation
+  
 	- Motion detectors in kitchen and bathrooms communicate via MQTT
+   
  	- Home Assistant and Valve Controller software adjustments
 
 - Observations
@@ -24,18 +26,28 @@
  	![Day](media/20240108_DAY_Plot.jpg)
 
   	- Water pressure varies several psi during the course of a day.
-  	- Water pressure spikes when water heater is active.
-  	- Water pressure recovers slowly after demand if there is a pressure regulator.
-  	- Water flow may not be detected by a static threshhold for slower flow rates or during periods of higher pressure.
+  	
+   	- Water pressure spikes when water heater is active.
+  	
+   	- Water pressure recovers slowly after demand if there is a pressure regulator.
+  	
+   	- Water flow may not be detected by a static threshhold for slower flow rates or during periods of higher pressure.
   	  
 ## How small a leak can we detect without using an impeller?
 - Water flow duration was measured under various conditions (flush, shower, laundry, dishes, etc.)
+  
 	- An adaptive threshhold was devised to close the main valve 10 minutes after detecting water flow.
+   
  	- Motion detected in the bathrooms or kitchen cause a 20 minute grace period (for showers, proof of consciousness, etc.).
-  	- Leak vol = leak rate x flow detection time + 10 min x leak rate + water residue after valve closes (approx 20 fl oz = 625 ml) 
+  
+  	- Leak vol = leak rate x flow detection time + 10 min x leak rate + water residue after valve closes (approx 20 fl oz = 625 ml)
+  	   
  	- 75 ml/min flow is detected in 80 seconds. Total leak = 75(80/60) + 10(75) + 625 = 1475 ml (=6 cups).
+  
         - 40 ml/min flow is detected in 6 minutes.  Total leak = 6(40) +10(40) + 625 = 1265 ml (=5 cups).
+          
        	- 24 ml/min flow (22 drips/10 sec) is detected in 11 minutes.  Total leak = 11(24) + 10(24) + 625 = 1129 ml (<5 cups).
+       	  
   	- Wide open faucet 5.3 liter/min flow would take 10 minutes to shut down.  Leak = 10(5.3)+.625 = 54 liters (14 gal).
   	 	- Therefore use moisture sensors to close valve immediately for larger volumes.
   	    
@@ -49,13 +61,18 @@
     
 ## Adaptive Threshhold Theory of Operation
 - The adaptive threshhold is based on a "leaky peak detector".
+  
   	- Leaky peak - If pressure (P) rises above the peak value, the calculated peak pressure is set equal P.
   		- The peak pressure stays constant for the next 10 minutes unless P exceeds it before then.
   	 	- After 10 minutes, the peak is reduced .25 psi if it doesn't go less than P.
   		- If P rate of decrease exceeds .25psi/10 min, the calculated peak pressure decreases at a slower rate.  Hence, the term leaky peak.
+  	   
   	- Threshhold (T) - The threshhold that defines flow is set at 1 psi below the most recent calculated leaky peak pressure.
+  	  
   	- Flow - When P goes below the threshhold, the 10 minute flow timer begins.  After 10 minutes, the valve is closed.
+  	  
   	- Motion Sensors reset the flow timer when motion is detected.
+  	  
   	- There is a similar mechanism to determine the threshhold when the flow stops and the pressure rises again.
   
   - Examples:
