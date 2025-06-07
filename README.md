@@ -71,7 +71,7 @@
 
 - Pressure decrease is greater (-. 38 psi +-) if the test is run soon after the water heater has been activated and the pressure tank has peaked and is on the downswing. 
 
-- A 24 ml/min leak causes a 3.44 psi drop during the nightly static pressure test under normal conditions.
+- A 24 ml/min leak causes a 3.44 psi drop during the nightly static pressure test under normal conditions.  This will get your attention!!
     
 ## Adaptive Threshhold Theory of Operation
 
