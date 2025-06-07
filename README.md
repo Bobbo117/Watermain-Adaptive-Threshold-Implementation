@@ -11,11 +11,11 @@
    			- Water Pressure Sensor
 			- Motorized Valve
        		
-	- Optional Valve Controller adaptations
+- Optional Valve Controller adaptations
    
-		- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
+	- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
     
-  		- Standard enclosure is substituted for custom 3D printed electronics enclosure.
+  	- Standard enclosure is substituted for custom 3D printed electronics enclosure.
       
 ![Install](media/Installation.jpg)
     
@@ -24,6 +24,14 @@
 	- Motion detectors in kitchen and bathrooms communicate via MQTT
    
  	- Home Assistant and Valve Controller software adjustments
+    
+- Why Bother?
+
+	- Detect degraded plumbing joints the cause undetected leaks behind walls
+
+   	- Friend who purchased house with prior insurance claim for this issue was denied insurance
+ 
+   	- Impellors corrode and stick ovver time; added installation and maintenance expense
 
 - Observations
 	- Typical 24 hour pressure profile:
@@ -39,6 +47,7 @@
    	- Water flow may not be detected by a static threshhold for slower flow rates or during periods of higher pressure.
   	  
 ## How small a leak can we detect without using an impeller?
+
 - Water flow duration was measured under various conditions (flush, shower, laundry, dishes, etc.)
   
 	- An adaptive threshhold was devised to close the main valve 10 minutes after detecting water flow.
@@ -180,24 +189,6 @@
 	- New processing is appended at the end of the loop() function.
    
 	- Two new threshold functions are appended at the end of the code after the loop function.
-  
-## Tips, Tricks, and Traps
-
-- If you take a long shower (> 10 minutes), verify that the bathroom motion sensor sees you!  Look for the blue light.
-  
-- For showers longer than 20 minutes, don't forget to wave at the motion sensor once in a while.
-  
-- Activate the Manual Override switch in the HA screen for the powerwash vendor or other vendors using water.
-  
-- Keep an eye on the motion sensors.  If one stops working, you could be in for a surprise in the shower at about 10 minutes.
-
-## Results
-
-- This system has operated since March 2022 with no unanticipated shutoffs.
-   
-- Very slow leak rates may not close the valve, especially if the pressure happens to be on the up cycle.
-  
-   	- In this case, the nightly Static Pressure Test gives an abnormally high reading that should be followed up.
 
 ## Home Assistant Screens
 
@@ -211,9 +202,31 @@
 
 ![4](media/20240108_HA_full.jpg)
 
+## Further Discussion
+
+- If you take a long shower (> 10 minutes), verify that the bathroom motion sensor sees you!  Look for the blue light.
+  
+- For showers longer than 20 minutes, don't forget to wave at the motion sensor once in a while.
+  
+- Activate the Manual Override switch in the Home Assistant control screen for the powerwash vendor or other vendors using water.
+  
+- Keep an eye on the motion sensors.  If one stops working, you could be in for a surprise in the shower at about 10 minutes.
+
+## Results
+
+- This system has operated from March 2022 thru June 8, 2025 (today) with ONE unanticipated shutoff caused when the incoming pressure from the street dipped below 65psi, the absolute minimum threshhold.
+   
+- Very slow leak rates may not close the valve, especially if the pressure happens to be on the up cycle (increasing as would be expected during the routine ebb and flow).
+  
+   	- In this case, the nightly Static Pressure Test gives an abnormally high reading that should be followed up.
+
+- Recently the Static Pressure Test gave excessive readings several nights in a row. This led to discovery that an outside faucet had not been closed tifgtly. There was no visible flow, just an occasional drip.
+
+- This system provides and added way to detect impending problems like the leaking toilet seal described above.  The graphic dispaly of psi over time adds a new dimension.  
+
 ## Conclusions
 
-- While this adaptive threshold mechanism is not as sensitive as an impeller, it provides an added layer of protection without the expense.
+- While this adaptive threshold mechanism is not as sensitive as an impeller, it provides an added layer of protection without the installation and maintenance expense.
   
 - This is a great project for those who want to become as one with their plumbing system while simultaneously protecting against one of the more frequent and expensive insurance claims. 
 
