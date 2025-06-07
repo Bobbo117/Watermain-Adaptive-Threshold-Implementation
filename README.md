@@ -25,7 +25,7 @@
    
  	- Home Assistant and Valve Controller software adjustments
     
-- Why Bother?
+## Why Bother?
 
 	- Detect degraded plumbing joints the cause undetected leaks behind walls
 
@@ -33,7 +33,7 @@
  
    	- Impellors corrode and stick ovver time; added installation and maintenance expense
 
-- Observations
+## Observations
 	- Typical 24 hour pressure profile:
   
  	![Day](media/20240108_DAY_Plot.jpg)
@@ -130,7 +130,7 @@
 ## Flow Duration Study
 
 - Overnight activity followed by shower at 6 am.
-- 
+  
 	- Note visual sign of failing toilet seal, which was seen before heard:
       
 ![Toilet Flush](media/ToiLeak.jpg)
@@ -162,12 +162,12 @@
   
 - Use most any ESPxyz here.  Standardizing with ESP32 keeps my life simple, if inelegant.
   
-- Add a white Ailkin USB power adapter and some velcro tape to the assembly and plug it in.
+- Add a white AILKIN USB power adapter and some velcro tape to the assembly and plug it in.
  
 	- The blue LED is easily visible when motion is detected.
    
 - Software for the PIR sensor is at https://github.com/Bobbo117/Cellular-IoT-Monitor/blob/main/src/AmbientAP/AmbientAP.ino .
-- 
+ 
 	-  Enable HA so that it will communicate with home assistant or an alternative destnation.
    
 	-  Use CASA_1 ID 4 (kitchen), 5 (bathroom), and 6 (bathroom2) for up to three PIR sensors.
@@ -206,11 +206,9 @@
 
 - If you take a long shower (> 10 minutes), verify that the bathroom motion sensor sees you!  Look for the blue light.
   
-- For showers longer than 20 minutes, don't forget to wave at the motion sensor once in a while.
-  
 - Activate the Manual Override switch in the Home Assistant control screen for the powerwash vendor or other vendors using water.
   
-- Keep an eye on the motion sensors.  If one stops working, you could be in for a surprise in the shower at about 10 minutes.
+- Keep an eye on the motion sensors.  If one stops working, you could be in for a surprise in the shower at about 10 minutes.  When you walk by one, a blue light acknowledges you.
 
 ## Results
 
