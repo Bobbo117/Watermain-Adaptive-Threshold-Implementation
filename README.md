@@ -1,15 +1,20 @@
-# Watermain Adaptive Threshold Implementation
+# Whole House Water Leak Detection & Valve Control with Adaptive Threshold Implementation
 
 - This project starts with Yang's project at https://github.com/heyitsyang/Whole-House-Water-Leak-Controller .
 	- Components
+   
  		- Home Assistant (Scroll to the bottom to view screen shots)
-		- Zigbee leak sensors 	
+     
+		- Zigbee leak sensors
+    
  		- Valve Controller communicates with Home Asistant using MQTT regarding
    			- Water Pressure Sensor
 			- Motorized Valve
        		
-	- Optional Valve Controller adaptations:
+	- Optional Valve Controller adaptations
+   
 		- Buck converter is replaced by dedicated 5v usb supply wall wart for ESP8266.
+    
   		- Standard enclosure is substituted for custom 3D printed electronics enclosure.
       
 ![Install](media/Installation.jpg)
@@ -60,11 +65,15 @@
 - A 24 ml/min leak causes a 3.44 psi drop during the nightly static pressure test under normal conditions.
     
 ## Adaptive Threshhold Theory of Operation
+
 - The adaptive threshhold is based on a "leaky peak detector".
   
   	- Leaky peak - If pressure (P) rises above the peak value, the calculated peak pressure is set equal P.
+  	  
   		- The peak pressure stays constant for the next 10 minutes unless P exceeds it before then.
+  	   
   	 	- After 10 minutes, the peak is reduced .25 psi if it doesn't go less than P.
+  	    
   		- If P rate of decrease exceeds .25psi/10 min, the calculated peak pressure decreases at a slower rate.  Hence, the term leaky peak.
   	   
   	- Threshhold (T) - The threshhold that defines flow is set at 1 psi below the most recent calculated leaky peak pressure.
@@ -98,14 +107,21 @@
 	![Adaptive2](media/AdaptiveThreshhold2.jpg)
  
 ## System Operation
+
 - Based on appliance signatures, a 10 minute flow causes the valve to shut down unless the following conditions exist:
+  
 	- Motion is detected in the bathroom or kitchens, causing a 20 minute standby period.
+   
 	- The manual override switch has been actuated.
+   
 	- Detection of moisture by external sensors cause immediate valve closure.
+   
  	- Monitor daily leakage test and graphical representation to catch other issues.
 
 ## Flow Duration Study
+
 - Overnight activity followed by shower at 6 am.
+- 
 	- Note visual sign of failing toilet seal, which was seen before heard:
       
 ![Toilet Flush](media/ToiLeak.jpg)
@@ -115,6 +131,7 @@
 ![Shower](media/ToiLeak2.jpg)
 
 - Wash Machine flow and dishwasher signatures indicate max flow duration is only a few minutes.
+  
 	- Laundry:
 
 ![LaundrySignature](media/LaundrySignature.jpg)
@@ -129,14 +146,23 @@
 
 
 ## Hardware
+
 - PIR motion sensors with optional temperature/humidity report to Home Assistant, causing a 20 minute standby.
+  
 - Be sure to use a 100nf decoupling capacitor across temp sensor Vcc and Gnd to prevent spurious PIR hits.
+  
 - Use most any ESPxyz here.  Standardizing with ESP32 keeps my life simple, if inelegant.
+  
 - Add a white Ailkin USB power adapter and some velcro tape to the assembly and plug it in.
+ 
 	- The blue LED is easily visible when motion is detected.
+   
 - Software for the PIR sensor is at https://github.com/Bobbo117/Cellular-IoT-Monitor/blob/main/src/AmbientAP/AmbientAP.ino .
+- 
 	-  Enable HA so that it will communicate with home assistant or an alternative destnation.
+   
 	-  Use CASA_1 ID 4 (kitchen), 5 (bathroom), and 6 (bathroom2) for up to three PIR sensors.
+   
    	-  These IDs will send the topics kithcen/pir, bathroom/pir, and bathroom2/pir respectively.
  	
 ![PIR_Disassembled](media/PIRDissassembly.jpg)
@@ -144,23 +170,33 @@
 ![PIR_Assembled](media/PIR_Motion_Detector.jpg)
 
 ## Software 
+
  - Adjustments to the original Watermain software are minimal:
+   
 	- New variable definitions and mqtt topics are appended at the beginning.
+   
   	- New command topics are appended to the mqtt callback function.
+     
 	- New processing is appended at the end of the loop() function.
+   
 	- Two new threshold functions are appended at the end of the code after the loop function.
   
 ## Tips, Tricks, and Traps
 
 - If you take a long shower (> 10 minutes), verify that the bathroom motion sensor sees you!  Look for the blue light.
+  
 - For showers longer than 20 minutes, don't forget to wave at the motion sensor once in a while.
+  
 - Activate the Manual Override switch in the HA screen for the powerwash vendor or other vendors using water.
+  
 - Keep an eye on the motion sensors.  If one stops working, you could be in for a surprise in the shower at about 10 minutes.
 
 ## Results
 
-- This system has operated since March 2022 with no unanticipated shutoffs.  
+- This system has operated since March 2022 with no unanticipated shutoffs.
+   
 - Very slow leak rates may not close the valve, especially if the pressure happens to be on the up cycle.
+  
    	- In this case, the nightly Static Pressure Test gives an abnormally high reading that should be followed up.
 
 ## Home Assistant Screens
