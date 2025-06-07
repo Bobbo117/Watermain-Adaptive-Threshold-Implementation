@@ -39,13 +39,13 @@
   
  ![Day](media/20240108_DAY_Plot.jpg)
 
-  	- Water pressure varies several psi during the course of a day
+  - Water pressure varies several psi during the course of a day
   	
-   	- Water pressure spikes when water heater is active
+  - Water pressure spikes when water heater is active
   	
-   	- Water pressure recovers slowly after demand if there is a pressure regulator
-  	
-   	- Water flow may not be detected by a static threshhold for slower flow rates or during periods of higher pressure
+  - Water pressure recovers slowly after demand if there is a pressure regulator
+
+- Water flow may not be detected by a static threshhold for slower flow rates or during periods of higher pressure
   	  
 ## How small a leak can we detect without using an impeller?
 
