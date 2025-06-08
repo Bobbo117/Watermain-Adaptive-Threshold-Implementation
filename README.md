@@ -31,7 +31,7 @@
 
 - Friend who purchased house with prior insurance claim for this issue was denied insurance
  
-- Impellors corrode and stick over time; added installation and maintenance expense
+- Impellers corrode and stick over time; added installation and maintenance expense
 
 ## Observations
 
@@ -211,7 +211,7 @@
 
 ## Results
 
-- This system has operated from March 2022 thru June 8, 2025 (today) with ONE unanticipated shutoff caused when the incoming pressure from the street dipped below 65psi, the absolute minimum threshhold.
+- This system has operated from March 2023 thru June 8, 2025 (today) with ONE unanticipated shutoff caused when the incoming pressure from the street dipped below 65psi, the absolute minimum threshhold.
    
 - Very slow leak rates may not close the valve, especially if the pressure happens to be on the up cycle (increasing as would be expected during the routine ebb and flow).
   
