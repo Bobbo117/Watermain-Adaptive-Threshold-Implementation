@@ -33,6 +33,10 @@
  
 - Impellers corrode and stick over time; added installation and maintenance expense
 
+- Detect faucets that weren't completely closed
+
+- Water damage is expensive, inconvenient, and leads to future home insurance problems
+
 ## Observations
 
 - Typical 24 hour pressure profile:
@@ -45,7 +49,9 @@
   	
   - Water pressure recovers slowly after demand if there is a pressure regulator
 
-- Water flow may not be detected by a static threshhold for slower flow rates or during periods of higher pressure
+  - Water flow may not be detected by a static threshhold for slower flow rates or during periods of higher pressure
+
+  - Somewhere between 65 - 66 psi is the lowest hard threshhold to indicate flow, but it may not be adequate in all scenarios
   	  
 ## How small a leak can we detect without using an impeller?
 
@@ -155,7 +161,7 @@
 ![Adaptive](media/Morning_routine_incl_shower.jpg)
 
 
-## Hardware
+## Hardware (Optional)
 
 - PIR motion sensors with optional temperature/humidity report to Home Assistant, causing a 20 minute standby.
   
@@ -209,6 +215,8 @@
   
 - Activate the Manual Override switch in the Home Assistant control screen for the powerwash vendor or other vendors using water.
 
+- You can forgo the PIR motion sensors if you simply turn off the water momentarily before 10 minutes is up.
+
 ## Results
 
 - This system has operated from March 2023 thru June 8, 2025 (today) with ONE unanticipated shutoff caused when the incoming pressure from the street dipped below 65psi, the absolute minimum threshhold.
@@ -221,7 +229,7 @@
 
 - It turns out that the PIR motion detectors are unnecessary at our house, because we have no continous flows close to 10 minutes.  Appliances don't draw water more than a few minutes at a time, and there are no long showerers.
 
-- This system provides and added way to detect impending problems like the leaking toilet seal described above.  The graphic dispaly of psi over time adds a new dimension.  
+- This system provides an added way to detect impending problems like the leaking toilet seal described above.  The graphic dispaly of psi over time adds a new dimension.  
 
 ## Conclusions
 
